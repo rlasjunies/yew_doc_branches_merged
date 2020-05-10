@@ -1,0 +1,2360 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="getting-started/project-setup/index.html"><strong aria-hidden="true">2.</strong> Project Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/project-setup/using-wasm-pack.html"><strong aria-hidden="true">2.1.</strong> Using wasm-pack</a></li><li class="chapter-item expanded "><a href="getting-started/project-setup/using-wasm-bindgen.html"><strong aria-hidden="true">2.2.</strong> Using wasm-bindgen</a></li><li class="chapter-item expanded "><a href="getting-started/project-setup/using-cargo-web.html"><strong aria-hidden="true">2.3.</strong> Using cargo-web</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/starter-templates.html"><strong aria-hidden="true">3.</strong> Starter Templates</a></li><li class="chapter-item expanded "><a href="getting-started/build-a-sample-app.html"><strong aria-hidden="true">4.</strong> Build a Sample App</a></li><li class="chapter-item expanded "><a href="getting-started/choose-web-library.html"><strong aria-hidden="true">5.</strong> Choose web-sys or stdweb</a></li><li class="chapter-item expanded "><a href="getting-started/examples.html"><strong aria-hidden="true">6.</strong> Learn through examples</a></li><li class="chapter-item expanded "><a href="concepts/html/index.html"><strong aria-hidden="true">7.</strong> Using html!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/html/lists.html"><strong aria-hidden="true">7.1.</strong> Lists</a></li><li class="chapter-item expanded "><a href="concepts/html/elements.html"><strong aria-hidden="true">7.2.</strong> Elements</a></li><li class="chapter-item expanded "><a href="concepts/html/literals-and-expressions.html"><strong aria-hidden="true">7.3.</strong> Literals &amp; Expressions</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/components/index.html"><strong aria-hidden="true">8.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/components/internalstate.html"><strong aria-hidden="true">8.1.</strong> Internal State</a></li><li class="chapter-item expanded "><a href="concepts/components/trapevents.html"><strong aria-hidden="true">8.2.</strong> Listen to events</a></li><li class="chapter-item expanded "><a href="concepts/components/properties.html"><strong aria-hidden="true">8.3.</strong> Properties</a></li><li class="chapter-item expanded "><a href="concepts/components/emitevents.html"><strong aria-hidden="true">8.4.</strong> Emit events</a></li><li class="chapter-item expanded "><a href="concepts/components/nestedcomponents.html"><strong aria-hidden="true">8.5.</strong> Nested component</a></li><li class="chapter-item expanded "><a href="concepts/components/refs.html"><strong aria-hidden="true">8.6.</strong> Refs</a></li><li class="chapter-item expanded "><a href="concepts/components/styling.html"><strong aria-hidden="true">8.7.</strong> Styling</a></li><li class="chapter-item expanded "><a href="concepts/components/lifecycle.html"><strong aria-hidden="true">8.8.</strong> Lifecycle</a></li><li class="chapter-item expanded "><a href="concepts/components/callbacks.html"><strong aria-hidden="true">8.9.</strong> Callbacks</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/agents.html"><strong aria-hidden="true">9.</strong> Agents</a></li><li class="chapter-item expanded "><a href="concepts/services/index.html"><strong aria-hidden="true">10.</strong> Services</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/services/format.html"><strong aria-hidden="true">10.1.</strong> Format</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/router.html"><strong aria-hidden="true">11.</strong> Router</a></li><li class="chapter-item expanded "><a href="advanced-topics/optimizations.html"><strong aria-hidden="true">12.</strong> Optimizations &amp; Best Practices</a></li><li class="chapter-item expanded "><a href="advanced-topics/how-it-works.html"><strong aria-hidden="true">13.</strong> Low-level library internals</a></li><li class="chapter-item expanded "><a href="more/roadmap.html"><strong aria-hidden="true">14.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="more/testing.html"><strong aria-hidden="true">15.</strong> Testing</a></li><li class="chapter-item expanded "><a href="more/debugging.html"><strong aria-hidden="true">16.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="more/external-libs.html"><strong aria-hidden="true">17.</strong> External Libs</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<h2><a class="header" href="#what-is-yew" id="what-is-yew">What is Yew?</a></h2>
+<p><strong>Yew</strong> is a modern <a href="https://www.rust-lang.org/">Rust</a> framework for creating multi-threaded front-end web apps with <a href="https://webassembly.org/">WebAssembly</a>.</p>
+<ul>
+<li>It features a <strong>component-based</strong> framework which makes it easy to create interactive UIs. Developers who have experience with frameworks like <a href="https://reactjs.org/">React</a> and <a href="https://elm-lang.org/">Elm</a> should feel quite at home when using Yew.</li>
+<li>It has <strong>great performance</strong> by minimizing DOM API calls and by helping developers easily offload processing to background web workers.</li>
+<li>It supports <strong>JavaScript interoperability</strong>, allowing developers to leverage NPM packages and integrate with existing JavaScript applications.</li>
+</ul>
+<h3><a class="header" href="#join-us-" id="join-us-">Join Us 😊</a></h3>
+<ul>
+<li>You can report bugs and discuss features on the <a href="https://github.com/yewstack/yew/issues">GitHub issues page</a></li>
+<li>We ❤️pull requests. Check out <a href="https://github.com/yewstack/yew/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good first issues</a> if you'd like to help out!</li>
+<li>Our <a href="https://discord.gg/VQck8X4">Discord chat</a> is very active and is a great place to ask questions</li>
+</ul>
+<p><img src="https://img.shields.io/github/stars/yewstack/yew?color=009A5B&amp;label=Github%20stars" alt="Our community is thriving!" /></p>
+<h3><a class="header" href="#ready-to-dive-in" id="ready-to-dive-in">Ready to dive in?</a></h3>
+<p>Click the link below to learn how to build your first Yew app and learn from community example projects</p>
+<p>{% page-ref page=&quot;getting-started/project-setup/&quot; %}</p>
+<h3><a class="header" href="#still-not-convinced" id="still-not-convinced"><strong>Still not convinced?</strong></a></h3>
+<p>This project is built on cutting edge technology and is great for developers who like to develop the foundational projects of tomorrow. Here are some reasons why we believe that frameworks like Yew are the future of web development.</p>
+<h4><a class="header" href="#wait-why-webassembly" id="wait-why-webassembly"><strong>Wait, why WebAssembly?</strong></a></h4>
+<p>WebAssembly <em>(Wasm)</em> is a portable low-level language that Rust can compile into. It runs at native speeds in the browser and is interoperable with JavaScript and supported in all major browsers. For ideas on how to get the most out of WebAssembly for your app, check out this list of <a href="https://webassembly.org/docs/use-cases/">Use Cases</a>.</p>
+<p>It should be noted that using Wasm is not (yet) a silver bullet for improving the performance of a web app. As of right now, using DOM APIs from WebAssembly is still slower than calling them directly from JavaScript. This is a temporary issue which the <a href="https://github.com/WebAssembly/interface-types/blob/master/proposals/interface-types/Explainer.md">WebAssembly Interface Types</a> proposal aims to resolve. If you would like to learn more, check out this <a href="https://hacks.mozilla.org/2019/08/webassembly-interface-types/">excellent article</a> from Mozilla.</p>
+<h4><a class="header" href="#ok-but-why-rust" id="ok-but-why-rust">Ok, but why Rust?</a></h4>
+<p>Rust is blazing fast and reliable with its rich type system and ownership model. It has a tough learning curve but is well worth the effort. Rust has been voted the most loved programming language in Stack Overflow's Developer Survey four years in a row: <a href="https://insights.stackoverflow.com/survey/2016#technology-most-loved-dreaded-and-wanted">2016</a>, <a href="https://insights.stackoverflow.com/survey/2017#most-loved-dreaded-and-wanted">2017</a>, <a href="https://insights.stackoverflow.com/survey/2018#technology-_-most-loved-dreaded-and-wanted-languages">2018</a> and <a href="https://insights.stackoverflow.com/survey/2019#technology-_-most-loved-dreaded-and-wanted-languages">2019</a>.</p>
+<p>Rust also helps developers write safer code with its rich type system and ownership model. Say goodbye to hard to track down race condition bugs in JavaScript! In fact, with Rust, most of your bugs will be caught by the compiler before your app even runs. And don't worry, when your app does run into an error, you can still get full stack-traces for your Rust code in the browser console.</p>
+<h4><a class="header" href="#alternatives" id="alternatives">Alternatives?</a></h4>
+<p>We love to share ideas with other projects and believe we can all help each other reach the full potential of this exciting new technology. If you're not into Yew, you may like the following projects (listed alphabetically)</p>
+<ul>
+<li><a href="https://github.com/utkarshkukreti/draco">Draco</a> - <em>&quot;A Rust library for building client side web applications with Web Assembly&quot;</em></li>
+<li><a href="https://github.com/chinedufn/percy">Percy</a> - <em>&quot;A modular toolkit for building isomorphic web apps with Rust + WebAssembly&quot;</em></li>
+<li><a href="https://github.com/seed-rs/seed">Seed</a> - <em>&quot;A Rust framework for creating web apps&quot;</em></li>
+<li><a href="https://github.com/rbalicki2/smithy">Smithy</a> - <em>&quot;A framework for building WebAssembly apps in Rust&quot;</em></li>
+</ul>
+<hr />
+<h2><a class="header" href="#description-set-yourself-up-for-success" id="description-set-yourself-up-for-success">description: Set yourself up for success</a></h2>
+<h1><a class="header" href="#project-setup" id="project-setup">Project Setup</a></h1>
+<h2><a class="header" href="#rust" id="rust">Rust</a></h2>
+<p>First, you'll need Rust. To install Rust and the <code>cargo</code> build tool, follow the <a href="https://www.rust-lang.org/tools/install">official instructions</a>.</p>
+<h2><a class="header" href="#wasm-build-tools" id="wasm-build-tools"><strong>Wasm Build Tools</strong></a></h2>
+<p>Extra tooling is needed to facilitate the interop between WebAssembly and JavaScript. Additionally, depending on the tool you choose, they can help make deployment and packaging much less of a headache by generating all of the wrapper JavaScript code necessary to run the <code>.wasm</code> file from your app in the browser.</p>
+<h3><a class="header" href="#a-hrefhttpsrustwasmgithubiodocswasm-packwasm-packa" id="a-hrefhttpsrustwasmgithubiodocswasm-packwasm-packa"><a href="https://rustwasm.github.io/docs/wasm-pack/"><strong><code>wasm-pack</code></strong></a></a></h3>
+<p>A CLI tool developed by the Rust / Wasm Working Group for packaging up WebAssembly. Best used together with the <a href="https://github.com/wasm-tool/wasm-pack-plugin"><code>wasm-pack-plugin</code></a> for Webpack.</p>
+<p>{% page-ref page=&quot;using-wasm-pack.md&quot; %}</p>
+<h3><a class="header" href="#a-hrefhttpsrustwasmgithubiodocswasm-bindgenwasm-bindgena" id="a-hrefhttpsrustwasmgithubiodocswasm-bindgenwasm-bindgena"><a href="https://rustwasm.github.io/docs/wasm-bindgen/"><strong><code>wasm-bindgen</code></strong></a></a></h3>
+<p>Both a library and CLI tool and is also developed by the Rust / Wasm Working Group. It is a low level tool (used internally by <code>wasm-pack</code>) which facilitates JS / WebAssembly interoperability. We don't recommend using <code>wasm-bindgen</code>directly because it requires hand-writing some JavaScript to bootstrap you WebAssembly binary. However, it is possible and more info can be found on the <a href="https://rustwasm.github.io/docs/wasm-bindgen/"><strong><code>wasm-bindgen</code> guide</strong></a>.</p>
+<p>{% page-ref page=&quot;using-wasm-bindgen.md&quot; %}</p>
+<h3><a class="header" href="#a-hrefhttpsgithubcomkoutecargo-webcargo-weba" id="a-hrefhttpsgithubcomkoutecargo-webcargo-weba"><a href="https://github.com/koute/cargo-web"><strong><code>cargo-web</code></strong></a></a></h3>
+<p>The preferred web workflow tool before the introduction of <code>wasm-pack</code> and <code>wasm-bindgen</code>. It is still the <strong>quickest</strong> way to get up and running and worth installing to run examples that haven't been migrated to support <code>wasm-pack</code> yet.</p>
+<p>{% page-ref page=&quot;using-cargo-web.md&quot; %}</p>
+<h3><a class="header" href="#comparison" id="comparison">Comparison</a></h3>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"><code>wasm-pack</code>
+      </th>
+      <th style="text-align:left"><code>wasm-bindgen</code>
+      </th>
+      <th style="text-align:left"><code>cargo-web</code>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Project Status</td>
+      <td style="text-align:left">Actively maintained by the <a href="https://rustwasm.github.io/">Rust / Wasm Working Group</a>
+      </td>
+      <td style="text-align:left">Actively maintained by the <a href="https://rustwasm.github.io/">Rust / Wasm Working Group</a>
+      </td>
+      <td style="text-align:left">No Github activity for over 6 months</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Dev Experience</td>
+      <td style="text-align:left">Almost there! Requires <code>webpack</code> for best experience.</td>
+      <td
+      style="text-align:left">Barebones. You&apos;ll need to write some scripts to streamline your dev
+        experience.</td>
+        <td style="text-align:left">Just works! Batteries included, no external dependencies needed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Local Server</td>
+      <td style="text-align:left">Supported with <code>webpack</code> plugin</td>
+      <td style="text-align:left">Not supported</td>
+      <td style="text-align:left">Supported</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Auto rebuild on local changes</td>
+      <td style="text-align:left">Supported with <code>webpack</code> plugin</td>
+      <td style="text-align:left">Not Supported</td>
+      <td style="text-align:left">Supported</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Headless Browser Testing</td>
+      <td style="text-align:left"><a href="https://rustwasm.github.io/docs/wasm-pack/commands/test.html">Supported</a>
+      </td>
+      <td style="text-align:left"><a href="https://rustwasm.github.io/docs/wasm-bindgen/wasm-bindgen-test/index.html">Supported</a>
+      </td>
+      <td style="text-align:left"><a href="https://github.com/koute/cargo-web#features">Supported</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Supported Targets</td>
+      <td style="text-align:left">
+        <ul>
+          <li><code>wasm32-unknown-unknown</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li><code>wasm32-unknown-unknown</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li><code>wasm32-unknown-unknown</code>
+          </li>
+          <li><code>wasm32-unknown-emscripten</code>
+          </li>
+          <li><code>asmjs-unknown-emscripten</code>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>web-sys</code>
+      </td>
+      <td style="text-align:left">Compatible</td>
+      <td style="text-align:left">Compatible</td>
+      <td style="text-align:left">Incompatible</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>stdweb</code>
+      </td>
+      <td style="text-align:left">Compatible</td>
+      <td style="text-align:left">Compatible</td>
+      <td style="text-align:left">Compatible</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Example Usage</td>
+      <td style="text-align:left"><a href="https://github.com/yewstack/yew-wasm-pack-minimal">Starter template</a>
+      </td>
+      <td style="text-align:left"><a href="https://github.com/yewstack/yew/blob/master/examples/build.sh">Build script</a> for
+        Yew examples</td>
+      <td style="text-align:left"><a href="https://www.github.com/yewstack/yew/tree/master/yew-stdweb/examples">Build script</a> for
+        Yew examples</td>
+    </tr>
+  </tbody>
+</table><h1><a class="header" href="#using-wasm-pack" id="using-wasm-pack">Using wasm-pack</a></h1>
+<p>This tool was created by the Rust / Wasm Working Group and is the most actively developed tool for building WebAssembly applications. It supports packaging code into <code>npm</code> modules and has an accompanying <a href="https://github.com/wasm-tool/wasm-pack-plugin">Webpack plugin</a> for easy integration with an existing JavaScript application. Find more information <a href="https://rustwasm.github.io/docs/wasm-pack/introduction.html">here</a>.</p>
+<p>{% hint style=&quot;info&quot; %}
+Note that the crate-type in your <code>Cargo.toml</code> will need to be <code>cdylib</code> when using <code>wasm-pack</code>
+{% endhint %}</p>
+<h3><a class="header" href="#install" id="install">Install</a></h3>
+<pre><code class="language-bash">cargo install wasm-pack
+</code></pre>
+<h3><a class="header" href="#build" id="build">Build</a></h3>
+<p>This command will produce a bundle in the <code>./pkg</code> directory with your app's compiled WebAssembly along with a JavaScript wrapper which can be used to start your application.</p>
+<pre><code class="language-bash">wasm-pack build --target web
+</code></pre>
+<h3><a class="header" href="#bundle" id="bundle">Bundle</a></h3>
+<p>For more information on Rollup visit this <a href="https://rollupjs.org/guide/en/#quick-start">guide</a></p>
+<pre><code class="language-bash">rollup ./main.js --format iife --file ./pkg/bundle.js
+</code></pre>
+<h3><a class="header" href="#serve" id="serve">Serve</a></h3>
+<p>Feel free to use your preferred server. Here we use a simple python server to serve to <a href="http://%5B::1%5D:8000">http://[::1]:8000</a>.</p>
+<pre><code class="language-bash">python -m http.server 8000
+</code></pre>
+<h3><a class="header" href="#supported-targets" id="supported-targets">Supported Targets</a></h3>
+<ul>
+<li><code>wasm32-unknown-unknown</code></li>
+</ul>
+<h1><a class="header" href="#using-wasm-bindgen" id="using-wasm-bindgen">Using wasm-bindgen</a></h1>
+<p>{% hint style=&quot;info&quot; %}
+<code>Contribute to our docs:</code> <a href="https://github.com/yewstack/docs/issues/34">Explain how to use wasm-bindgen to build an app</a>
+{% endhint %}</p>
+<h1><a class="header" href="#using-cargo-web" id="using-cargo-web">Using cargo-web</a></h1>
+<p>Cargo web is a cargo subcommand for building client web apps. It makes building and deploying web applications incredibly easy. It is also the only toolchain that supports Emscripten targets. Read more <a href="https://github.com/koute/cargo-web">here</a>.</p>
+<p><strong>Install</strong></p>
+<pre><code class="language-bash">cargo install cargo-web
+</code></pre>
+<h3><a class="header" href="#build-1" id="build-1">Build</a></h3>
+<pre><code class="language-bash">cargo web build
+</code></pre>
+<h3><a class="header" href="#run" id="run">Run</a></h3>
+<pre><code class="language-bash">cargo web start
+</code></pre>
+<h3><a class="header" href="#supported-targets-1" id="supported-targets-1">Supported Targets</a></h3>
+<ul>
+<li><code>wasm32-unknown-unknown</code></li>
+<li><code>wasm32-unknown-emscripten</code></li>
+<li><code>asmjs-unknown-emscripten</code></li>
+</ul>
+<p>{% hint style=&quot;info&quot; %}
+For <code>*-emscripten</code> targets, you'll need to install the Emscripten SDK
+{% endhint %}</p>
+<h1><a class="header" href="#starter-templates" id="starter-templates">Starter Templates</a></h1>
+<h2><a class="header" href="#wasm-pack" id="wasm-pack"><code>wasm-pack</code></a></h2>
+<ul>
+<li><a href="https://github.com/yewstack/yew-wasm-pack-minimal">Minimal Template</a> - Uses <code>wasm-pack</code> and <code>rollup</code> to build your application, and your own server to serve it. No bells or whistles here.</li>
+<li><a href="https://github.com/yewstack/yew-wasm-pack-template">Webpack Template</a> - Uses <code>wasm-pack</code> and the <a href="https://github.com/wasm-tool/wasm-pack-plugin"><code>wasm-pack-plugin</code></a> for Webpack to streamline development.</li>
+</ul>
+<p>The important distinction between these templates and using <code>cargo-web</code> is that this approach uses a <code>lib</code>, not a <code>bin</code> crate, and the entry-point to your program is annotated with a <code>#[wasm_bindgen]</code> annotation.</p>
+<p>Your <code>Cargo.toml</code> also should specify that you have a &quot;cdylib&quot; crate-type.</p>
+<p>{% code title=&quot;Cargo.toml&quot; %}</p>
+<pre><code class="language-text">[package]
+name = &quot;yew-app&quot;
+version = &quot;0.1.0&quot;
+authors = [&quot;Yew App Developer &lt;name@example.com&gt;&quot;]
+edition = &quot;2018&quot;
+
+[lib]
+crate-type = [&quot;cdylib&quot;]
+
+[dependencies]
+# for web_sys
+yew = 0.15
+# or for stdweb
+# yew = { version = &quot;0.15&quot;, package = &quot;yew-stdweb&quot; }
+wasm-bindgen = &quot;0.2&quot;
+</code></pre>
+<p>{% endcode %}</p>
+<h2><a class="header" href="#other-templates" id="other-templates">Other templates</a></h2>
+<ul>
+<li><a href="https://github.com/spielrs/yew-parcel-template">Parcel Template</a> - Created by a community member and uses <a href="https://parceljs.org/">Parcel</a></li>
+</ul>
+<h1><a class="header" href="#build-a-sample-app" id="build-a-sample-app">Build a Sample App</a></h1>
+<p>First create a new binary project:</p>
+<pre><code class="language-bash">cargo new yew-app &amp;&amp; cd yew-app
+</code></pre>
+<p>Add <code>yew</code> and <code>wasm-bindgen</code> to your dependencies (refer <a href="https://docs.rs/yew">here</a> for the latest version)</p>
+<p>{% code title=&quot;Cargo.toml&quot; %}</p>
+<pre><code class="language-text">[package]
+name = &quot;yew-app&quot;
+version = &quot;0.1.0&quot;
+authors = [&quot;Yew App Developer &lt;name@example.com&gt;&quot;]
+edition = &quot;2018&quot;
+
+[lib]
+crate-type = [&quot;cdylib&quot;, &quot;rlib&quot;]
+
+[dependencies]
+yew = &quot;0.15&quot;
+wasm-bindgen = &quot;0.2&quot;
+</code></pre>
+<p>{% endcode %}</p>
+<p>Copy the following template into your <code>src/lib.rs</code> file:</p>
+<p>{% code title=&quot;src/lib.rs&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use wasm_bindgen::prelude::*;
+use yew::prelude::*;
+
+struct Model {
+    link: ComponentLink&lt;Self&gt;,
+    value: i64,
+}
+
+enum Msg {
+    AddOne,
+}
+
+impl Component for Model {
+    type Message = Msg;
+    type Properties = ();
+    fn create(_: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            value: 0,
+        }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::AddOne =&gt; self.value += 1
+        }
+        true
+    }
+
+    fn change(&amp;mut self, _props: Self::Properties) -&gt; ShouldRender {
+        // Should only return &quot;true&quot; if new properties are different to
+        // previously received properties.
+        // This component has no properties so we will always return &quot;false&quot;.
+        false
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        html! {
+            &lt;div&gt;
+                &lt;button onclick=self.link.callback(|_| Msg::AddOne)&gt;{ &quot;+1&quot; }&lt;/button&gt;
+                &lt;p&gt;{ self.value }&lt;/p&gt;
+            &lt;/div&gt;
+        }
+    }
+}
+
+#[wasm_bindgen(start)]
+pub fn run_app() {
+    App::&lt;Model&gt;::new().mount_to_body();
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<p>This template sets up your root <code>Component</code>, called <code>Model</code> which shows a button that updates itself when you click it. Take special note of <code>App::&lt;Model&gt;::new().mount_to_body()</code> inside <code>main()</code> which starts your app and mounts it to the page's <code>&lt;body&gt;</code> tag. If you would like to start your application with any dynamic properties, you can instead use <code>App::&lt;Model&gt;::new().mount_to_body_with_props(..)</code>.</p>
+<p>Finally, add an <code>index.html</code> file into a new folder named <code>static</code> in your app.</p>
+<pre><code class="language-bash">mkdir static
+</code></pre>
+<p>{% code title=&quot;index.html&quot; %}</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Yew Sample App&lt;/title&gt;
+        &lt;script type=&quot;module&quot;&gt;
+			import init from &quot;./wasm.js&quot;
+			init()
+		&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>{% endcode %}</p>
+<h2><a class="header" href="#run-your-app" id="run-your-app">Run your App!</a></h2>
+<p>Using <a href="https://rustwasm.github.io/docs/wasm-pack/"><code>wasm-pack</code></a> is the preferred way to get up and running.
+If you haven't already, install <code>wasm-pack</code> with <code>cargo install wasm-pack</code> and then build and start a development server by running:</p>
+<pre><code class="language-bash">wasm-pack build --target web --out-name wasm --out-dir ./static
+</code></pre>
+<p><code>wasm-pack</code> generates a bundle in the <code>./static</code> directory with your app's compiled WebAssembly along with a JavaScript wrapper which will load your application's WebAssembly binary and run it.</p>
+<p>Then, use your favorite web server to server the files under <code>./static</code>. For example:</p>
+<pre><code class="language-bash">cargo +nightly install miniserver
+miniserve ./static --index index.html
+</code></pre>
+<h1><a class="header" href="#choose-web-sys-or-stdweb" id="choose-web-sys-or-stdweb">Choose web-sys or stdweb</a></h1>
+<h2><a class="header" href="#introduction-1" id="introduction-1">Introduction</a></h2>
+<p>Yew apps can be built with either <a href="https://docs.rs/web-sys"><code>web-sys</code></a> or <a href="https://docs.rs/stdweb"><code>stdweb</code></a>. These two crates provide the bindings between Rust and Web APIs. You'll need to choose one or the other when adding <code>yew</code> to your cargo dependencies:</p>
+<p>{% code title=&quot;Cargo.toml&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span><span class="boring">Choose `web-sys`
+</span>yew = &quot;0.15&quot;
+
+<span class="boring">Choose `stdweb`
+</span>yew = { version = &quot;0.15&quot;, package = &quot;yew-stdweb&quot; }
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<p>We recommend using <code>web-sys</code> due to its support from the <a href="https://rustwasm.github.io/">Rust / Wasm Working Group</a>.</p>
+<h2><a class="header" href="#example-usage" id="example-usage">Example Usage</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// web-sys
+let window: web_sys::Window = web_sys::window().expect(&quot;window not available&quot;);
+window.alert_with_message(&quot;hello from wasm!&quot;).expect(&quot;alert failed&quot;);
+
+// stdweb
+let window: stdweb::web::Window = stdweb::web::window();
+window.alert(&quot;hello from wasm!&quot;);
+
+// stdweb with js! macro
+use stdweb::js;
+use stdweb::unstable::TryFrom;
+use stdweb::web::Window;
+
+let window_val: stdweb::Value = js!{ return window; }; // &lt;- JS syntax inside!
+let window = Window::try_from(window_val).expect(&quot;conversion to window failed&quot;);
+window.alert(&quot;hello from wasm!&quot;);
+<span class="boring">}
+</span></code></pre></pre>
+<p>The APIs for the two crates differ slightly but they serve roughly the same purpose with similar functionality.</p>
+<h2><a class="header" href="#choosing-one" id="choosing-one">Choosing One</a></h2>
+<p>There are a few different angles to consider when choosing between using <code>web-sys</code> and <code>stdweb</code> for your app. Note, it's possible to use both in one app, but to minimize the binary size of your compiled <code>.wasm</code> it's best to choose one or the other.</p>
+<table><thead><tr><th align="left"></th><th align="left"><code>web-sys</code></th><th align="left"><code>stdweb</code></th></tr></thead><tbody>
+</tbody></table>
+<table><thead><tr><th align="left">Project Status</th><th align="left">Actively maintained by the <a href="https://rustwasm.github.io/">Rust / Wasm Working Group</a></th><th align="left">No Github activity for over 4 months</th></tr></thead><tbody>
+</tbody></table>
+<table><thead><tr><th align="left">Web API Coverage</th><th align="left">Rust APIs are auto-generated from the Web IDL spec and so should have 100% coverage.</th><th align="left">Browser APIs are added as needed by the community</th></tr></thead><tbody>
+</tbody></table>
+<table><thead><tr><th align="left">Rust API Design</th><th align="left">Takes conservative approach by returning <code>Result</code> for most API calls</th><th align="left">Often avoids <code>Result</code> in favor of panics. For instance, <code>stdweb::web::window()</code> will panic when called in a worker.</th></tr></thead><tbody>
+</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Supported Build Tools</th>
+      <th style="text-align:left">
+        <ul>
+          <li><code>wasm-bindgen</code>
+          </li>
+          <li><code>wasm-pack</code>
+          </li>
+        </ul>
+      </th>
+      <th style="text-align:left">
+        <ul>
+          <li><code>cargo-web</code>
+          </li>
+          <li><code>wasm-bindgen</code>
+          </li>
+          <li><code>wasm-pack</code>
+          </li>
+        </ul>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Supported Targets</th>
+      <th style="text-align:left">
+        <ul>
+          <li><code>wasm32-unknown-unknown</code>
+          </li>
+        </ul>
+      </th>
+      <th style="text-align:left">
+        <ul>
+          <li><code>wasm32-unknown-unknown</code>
+          </li>
+          <li><code>wasm32-unknown-emscripten</code>
+          </li>
+          <li><code>asmjs-unknown-emscripten</code>
+          </li>
+        </ul>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table><h1><a class="header" href="#learn-through-examples" id="learn-through-examples">Learn through examples</a></h1>
+<p>The Yew repository is chock-full of <a href="https://github.com/yewstack/yew/tree/v0.15.0/examples">examples</a> (in various states of maintenance). We recommend perusing them to get a feel for how to use different framework features. We also welcome pull-requests and issues for when they inevitably get neglected and need some ♥️</p>
+<ul>
+<li><a href="https://github.com/yewstack/yew/tree/v0.15.0/examples/todomvc"><strong>Todo App</strong> </a></li>
+<li><a href="https://github.com/yewstack/yew/tree/v0.15.0/examples/custom_components"><strong>Custom Components</strong></a></li>
+<li><a href="https://github.com/yewstack/yew/tree/v0.15.0/examples/multi_thread"><strong>Multi-threading (Agents)</strong></a></li>
+<li><a href="https://github.com/yewstack/yew/tree/v0.15.0/examples/timer"><strong>Timer Service</strong></a></li>
+<li><a href="https://github.com/yewstack/yew/tree/v0.15.0/examples/nested_list"><strong>Nested Components</strong></a></li>
+</ul>
+<hr />
+<h2><a class="header" href="#description-the-procedural-macro-for-generating-html-and-svg" id="description-the-procedural-macro-for-generating-html-and-svg">description: The procedural macro for generating HTML and SVG</a></h2>
+<h1><a class="header" href="#using-html" id="using-html">Using html!</a></h1>
+<p>The <code>html!</code> macro allows you to write HTML and SVG code declaratively. It is similar to JSX (a Javascript extension which allows you to write HTML code inside of Javascript).</p>
+<p><strong>Important notes</strong></p>
+<ol>
+<li>The <code>html!</code> macro only accepts one root html node (you can counteract this by <a href="concepts/html/lists.html">using fragments or iterators</a>)</li>
+<li>An empty <code>html! {}</code> invocation is valid and will not render anything</li>
+<li>Literals must always be quoted and wrapped in braces: <code>html! { &quot;Hello, World&quot; }</code></li>
+</ol>
+<p>{% page-ref page=&quot;lists.md&quot; %}</p>
+<p>{% page-ref page=&quot;elements.md&quot; %}</p>
+<p>{% page-ref page=&quot;literals-and-expressions.md&quot; %}</p>
+<p>{% page-ref page=&quot;components.md&quot; %}</p>
+<h1><a class="header" href="#lists" id="lists">Lists</a></h1>
+<h2><a class="header" href="#fragments" id="fragments">Fragments</a></h2>
+<p>The <code>html!</code> macro always requires a single root node. In order to get around this restriction, it's valid to wrap content in empty tags:</p>
+<p>{% tabs %}
+{% tab title=&quot;Valid&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Invalid&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>/* error: only one root html element allowed */
+
+html! {
+    &lt;div&gt;&lt;/div&gt;
+    &lt;p&gt;&lt;/p&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<h2><a class="header" href="#iterators" id="iterators">Iterators</a></h2>
+<p>Yew supports two different syntaxes for building html from an iterator:</p>
+<p>{% tabs %}
+{% tab title=&quot;Syntax Type 1&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;ul class=&quot;item-list&quot;&gt;
+        { self.props.items.iter().map(renderItem).collect::&lt;Html&gt;() }
+    &lt;/ul&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Syntax Type 2&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;ul class=&quot;item-list&quot;&gt;
+        { for self.props.items.iter().map(renderItem) }
+    &lt;/ul&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<hr />
+<h2><a class="header" href="#description-both-html-and-svg-elements-are-supported" id="description-both-html-and-svg-elements-are-supported">description: Both HTML and SVG elements are supported</a></h2>
+<h1><a class="header" href="#elements" id="elements">Elements</a></h1>
+<h2><a class="header" href="#tag-structure" id="tag-structure">Tag Structure</a></h2>
+<p>Element tags must either self-close <code>&lt;... /&gt;</code> or have a corresponding close tag for each open tag</p>
+<p>{% tabs %}
+{% tab title=&quot;Open - Close&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div id=&quot;my_div&quot;&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;INVALID&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div id=&quot;my_div&quot;&gt; // &lt;- MISSING CLOSE TAG
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Self-Closing&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;input id=&quot;my_input&quot; /&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;INVALID&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;input id=&quot;my_input&quot;&gt; // &lt;- MISSING SELF-CLOSE
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<p>{% hint style=&quot;info&quot; %}
+For convenience, elements which <em>usually</em> require a closing tag are <strong>allowed</strong> to self-close. For example, writing <code>html! { &lt;div class=&quot;placeholder&quot; /&gt; }</code> is valid.
+{% endhint %}</p>
+<h2><a class="header" href="#children" id="children">Children</a></h2>
+<p>Create complex nested HTML and SVG layouts with ease:</p>
+<p>{% tabs %}
+{% tab title=&quot;HTML&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;div&gt;
+        &lt;div data-key=&quot;abc&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;parent&quot;&gt;
+            &lt;span class=&quot;child&quot; value=&quot;anything&quot;&gt;&lt;/span&gt;
+            &lt;label for=&quot;first-name&quot;&gt;{ &quot;First Name&quot; }&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;first-name&quot; value=&quot;placeholder&quot; /&gt;
+            &lt;input type=&quot;checkbox&quot; checked=true /&gt;
+            &lt;textarea value=&quot;write a story&quot; /&gt;
+            &lt;select name=&quot;status&quot;&gt;
+                &lt;option selected=true disabled=false value=&quot;&quot;&gt;{ &quot;Selected&quot; }&lt;/option&gt;
+                &lt;option selected=false disabled=true value=&quot;&quot;&gt;{ &quot;Unselected&quot; }&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;SVG&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;svg width=&quot;149&quot; height=&quot;147&quot; viewBox=&quot;0 0 149 147&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;path d=&quot;M60.5776 13.8268L51.8673 42.6431L77.7475 37.331L60.5776 13.8268Z&quot; fill=&quot;#DEB819&quot;/&gt;
+        &lt;path d=&quot;M108.361 94.9937L138.708 90.686L115.342 69.8642&quot; stroke=&quot;black&quot; stroke-width=&quot;4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+        &lt;g filter=&quot;url(#filter0_d)&quot;&gt;
+            &lt;circle cx=&quot;75.3326&quot; cy=&quot;73.4918&quot; r=&quot;55&quot; fill=&quot;#FDD630&quot;/&gt;
+            &lt;circle cx=&quot;75.3326&quot; cy=&quot;73.4918&quot; r=&quot;52.5&quot; stroke=&quot;black&quot; stroke-width=&quot;5&quot;/&gt;
+        &lt;/g&gt;
+        &lt;circle cx=&quot;71&quot; cy=&quot;99&quot; r=&quot;5&quot; fill=&quot;white&quot; fill-opacity=&quot;0.75&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+        &lt;defs&gt;
+            &lt;filter id=&quot;filter0_d&quot; x=&quot;16.3326&quot; y=&quot;18.4918&quot; width=&quot;118&quot; height=&quot;118&quot; filterUnits=&quot;userSpaceOnUse&quot; color-interpolation-filters=&quot;sRGB&quot;&gt;
+                &lt;feGaussianBlur stdDeviation=&quot;2&quot;/&gt;
+                &lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot;/&gt;
+            &lt;/filter&gt;
+        &lt;/defs&gt;
+    &lt;/svg&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<h2><a class="header" href="#classes" id="classes">Classes</a></h2>
+<p>There are a number of convenient options for specifying classes for an element:</p>
+<p>{% tabs %}
+{% tab title=&quot;Literal&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Multiple&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=&quot;container center-align&quot;&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Interpolated&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=format!(&quot;{}-container&quot;, size)&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Expression&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=self.classes()&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Tuple&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=(&quot;class-1&quot;, &quot;class-2&quot;)&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Vector&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div class=vec![&quot;class-1&quot;, &quot;class-2&quot;]&gt;&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<h2><a class="header" href="#listeners" id="listeners">Listeners</a></h2>
+<p>Listener attributes need to be passed a <code>Callback</code> which is a wrapper around a closure. How you create your callback depends on how you wish your app to react to a listener event:</p>
+<p>{% tabs %}
+{% tab title=&quot;Component Handler&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>struct MyComponent {
+    link: ComponentLink&lt;Self&gt;,
+}
+
+enum Msg {
+    Click,
+}
+
+impl Component for MyComponent {
+    type Message = Msg;
+    type Properties = ();
+
+    fn create(_: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        MyComponent { link }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; {
+                // Handle Click
+            }
+        }
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        // Create a callback from a component link to handle it in a component
+        let click_callback = self.link.callback(|_: ClickEvent| Msg::Click);
+        html! {
+            &lt;button onclick=click_callback&gt;
+                { &quot;Click me!&quot; }
+            &lt;/button&gt;
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Agent Handler&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>struct MyComponent {
+    worker: Dispatcher&lt;MyWorker&gt;,
+}
+
+impl Component for MyComponent {
+    type Message = ();
+    type Properties = ();
+
+    fn create(_: Self::Properties, _: ComponentLink&lt;Self&gt;) -&gt; Self {
+        MyComponent {
+            worker: MyWorker::dispatcher()
+        }
+    }
+
+    fn update(&amp;mut self, _: Self::Message) -&gt; ShouldRender {
+        false
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        // Create a callback from a worker to handle it in another context
+        let click_callback = self.worker.callback(|_: ClickEvent| WorkerMsg::Process);
+        html! {
+            &lt;button onclick=click_callback&gt;
+                { &quot;Click me!&quot; }
+            &lt;/button&gt;
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}</p>
+<p>{% tab title=&quot;Other Cases&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>struct MyComponent;
+
+impl Component for MyComponent {
+    type Message = ();
+    type Properties = ();
+
+    fn create(_: Self::Properties, _: ComponentLink&lt;Self&gt;) -&gt; Self {
+        MyComponent
+    }
+
+    fn update(&amp;mut self, _: Self::Message) -&gt; ShouldRender {
+        false
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        // Create an ephemeral callback
+        let click_callback = Callback::from(|| {
+            ConsoleService::new().log(&quot;clicked!&quot;);
+        });
+
+        html! {
+            &lt;button onclick=click_callback&gt;
+                { &quot;Click me!&quot; }
+            &lt;/button&gt;
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endtab %}
+{% endtabs %}</p>
+<h1><a class="header" href="#literals--expressions" id="literals--expressions">Literals &amp; Expressions</a></h1>
+<h2><a class="header" href="#literals" id="literals">Literals</a></h2>
+<p>If expressions resolve to types that implement <code>Display</code>, they will be converted to strings and inserted into the DOM as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">Text</a> node.</p>
+<p>All display text must be enclosed by <code>{}</code> blocks because text is handled like an expression. This is the largest deviation from normal HTML syntax that Yew makes.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>let text = &quot;lorem ipsum&quot;;
+html!{
+    &lt;&gt;
+        &lt;div&gt;{text}&lt;/div&gt;
+        &lt;div&gt;{&quot;dolor sit&quot;}&lt;/div&gt;
+        &lt;span&gt;{42}&lt;/span&gt;
+    &lt;/&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#expressions" id="expressions">Expressions</a></h2>
+<p>You can insert expressions in your HTML using <code>{}</code> blocks, as long as they resolve to <code>Html</code></p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+  &lt;div&gt;
+    {
+      if show_link {
+        html! {
+          &lt;a href=&quot;https://example.com&quot;&gt;{&quot;Link&quot;}&lt;/a&gt;
+        }
+      } else {
+        html! {}
+      }
+    }
+  &lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>It often makes sense to extract these expressions into functions or closures to optimize for readability:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>let show_link = true;
+let maybe_display_link = move || -&gt; Html {
+  if show_link {
+    html! {
+      &lt;a href=&quot;https://example.com&quot;&gt;{&quot;Link&quot;}&lt;/a&gt;
+    }
+  } else {
+    html! {}
+  }
+};
+
+html! {
+     &lt;div&gt;{maybe_display_link()}&lt;/div&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h2><a class="header" href="#description-introduction-of-yew-component" id="description-introduction-of-yew-component">description: Introduction of Yew component</a></h2>
+<h1><a class="header" href="#components" id="components">Components</a></h1>
+<h2><a class="header" href="#what-are-components" id="what-are-components">What are Components</a></h2>
+<p>Components are the building blocks of Yew. They manage their own state and can render themselves to the DOM. Components are created by implementing the <code>Component</code> trait which describes the lifecycle of a component.</p>
+<h2><a class="header" href="#example-of-component" id="example-of-component">Example of component</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct ExampleComponent {
+    // state of the component
+    name: String,
+    show_message: bool,
+
+    // properties and events struct
+    props: Props,
+
+    // link field supports the mechanism through which components are able to register callbacks and update themselves
+    link: ComponentLink&lt;Self&gt;,
+}
+
+// enum of &quot;Messages&quot; that will be used to mutate the component state
+pub enum Msg {
+    Click,
+}
+
+// definition of properties and events of the component
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Superman&quot;.to_string())]
+    pub name: String,
+
+    #[prop_or_default]
+    pub onmyclickevent:Callback&lt;String&gt;,
+}
+
+impl Component for ExampleComponent {
+    type Message = Msg;
+    type Properties = Props;
+
+    // Initialization of the state
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+
+    // This method is executed each time the link.callbacks is called
+    // you can mutate the state based on the message received
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+
+            // mutate the component state
+            Msg::Click =&gt; self.show_message = true,
+        }
+        true
+    }
+
+    // you can use change method to decide if you would like to re-render when properties change 
+    fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+        if self.props != props {
+            self.props = props;
+            true
+        } else {
+            false
+        }
+    }
+
+    // Rendering of the component
+    fn view(&amp;self) -&gt; Html {
+        // different rendering depend on the component state
+        if !self.show_message {
+            html! {
+                // Listen to HTML events and trigger a message that will be managed in the update method
+                &lt;button onclick=self.link.callback( |_| Msg::Click )&gt;{&quot;Click to say hello!&quot;}&lt;/button&gt;
+            }
+        } else {
+            html! {
+                // Use state value in the html
+                &lt;h1&gt;{format!(&quot;Hello {}&quot;, self.name)}&lt;/h1&gt;
+            }
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h2><a class="header" href="#description-a-component-can-maintain-its-own-state-and-render-information-depending-on-it" id="description-a-component-can-maintain-its-own-state-and-render-information-depending-on-it">description: A component can maintain its own state and render information depending on it</a></h2>
+<h1><a class="header" href="#internal-state" id="internal-state">Internal state</a></h1>
+<p>The component can manage it's own state using a struct that implement the trait <code>Component</code>. The HTML rendering is based on this state.
+When the state change the component might be re-rendered.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct InternalStateComponent {
+    name:String,
+}
+
+impl Component for InternalStateComponent {
+    type Message = ();
+    type Properties = ();
+
+    fn create(_props: Self::Properties, _link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            name: &quot;Clark&quot;.into(),
+        }
+    }
+
+    fn update(&amp;mut self, _msg: Self::Message) -&gt; ShouldRender {
+        false
+    }
+
+    fn change(&amp;mut self, _props: Self::Properties) -&gt; ShouldRender {
+        false
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        html! {
+            &lt;&gt;
+                &lt;h1&gt;{format!(&quot;Hello {}&quot;,self.name)}&lt;/h1&gt;
+            &lt;/&gt;
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#defining-state" id="defining-state">Defining state</a></h2>
+<p>Here we add the <code>name</code> field to the struct</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+pub struct InternalStateComponent {
+    name:String,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#state-initialization" id="state-initialization">State initialization</a></h2>
+<p>The component lifecycle will initialize the state in the <code>create</code> method.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn create(_props: Self::Properties, _link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            name: &quot;Clark&quot;.into(),
+        }
+    }
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#rendering-using-the-state" id="rendering-using-the-state">Rendering using the state</a></h2>
+<p>Using the <code>html!</code> macro we can render html using the state from the <code>view</code> method</p>
+<blockquote>
+<p>please refer to the <code>html!</code> macro documentation page for more detail on how to render components as HTML</p>
+</blockquote>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn view(&amp;self) -&gt; Html {
+        html! {
+            &lt;h1&gt;{format!(&quot;Hello {}&quot;, self.name)}&lt;/h1&gt;
+        }
+    }
+// ...
+<span class="boring">}
+</span><span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h2><a class="header" href="#description-component-could-mutate-internal-state-or-re-render-based-on-events-emitted-by-html-or-yew-components" id="description-component-could-mutate-internal-state-or-re-render-based-on-events-emitted-by-html-or-yew-components">description: Component could mutate internal state or re-render based on events emitted by html or Yew components</a></h2>
+<h1><a class="header" href="#listen-to-events-and-mutate-state" id="listen-to-events-and-mutate-state">Listen to events and mutate state</a></h1>
+<p>The framework provide the capability to update the internal state, for example, when an event is emitted by a child component.</p>
+<p>The <code>update</code> method could be called and mutate the internal state. The <code>update</code> method is called via <code>self.link.callback</code>, <code>link</code> being an attribute of the component struct.</p>
+<p>The <code>update</code> method receives &quot;context&quot; by the argument <code>msg</code> of type <code>Self::Message</code>. You can define any type for <code>Message</code>. The common way is to define an enum <code>Msg</code> for any action that can mutate the state. Then define <code>Msg</code> as the type of <code>Message</code> in the Component trait implementation.</p>
+<p>You can decide to render the component returning <code>true</code> from the <code>Update</code> method.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct ListenEventComponent {
+    link: ComponentLink&lt;Self&gt;,
+    name: String,
+    show_message: bool,
+}
+
+pub enum Msg {
+    Click,
+}
+
+impl Component for ListenEventComponent {
+    type Message = Msg;
+    type Properties = ();
+
+    fn create(_props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            name: &quot;Clark&quot;.into(),
+            show_message: false,
+        }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+        }
+        true
+    }
+
+    fn change(&amp;mut self, _props: Self::Properties) -&gt; ShouldRender {
+        true
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        if !self.show_message {
+            html! {
+                &lt;&gt;
+                    &lt;button onclick=self.link.callback( |_| Msg::Click )&gt;{&quot;Click here!&quot;}&lt;/button&gt;
+                &lt;/&gt;
+            }
+        } else {
+            html! {
+                &lt;&gt;
+                    &lt;h1&gt;{format!(&quot;Hello {}&quot;, self.name)}&lt;/h1&gt;
+                &lt;/&gt;
+            }
+        }
+    }
+}
+
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#define-the-link-attribute-in-the-state" id="define-the-link-attribute-in-the-state">Define the <code>link</code> attribute in the state</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+pub struct ListenEventComponent {
+    link: ComponentLink&lt;Self&gt;,
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#define-a-message-enum" id="define-a-message-enum">Define a Message enum</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span>
+<span class="boring">fn main() {
+</span>// ...
+pub enum Msg {
+    Click,
+}
+
+impl Component for ListenEventComponent {
+    type Message = Msg;
+    type Properties = ();
+
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#update-the-internal-state-based-on-the-context" id="update-the-internal-state-based-on-the-context">Update the internal state based on the context</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+        }
+        true
+    }
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#register-to-the-html-events" id="register-to-the-html-events">Register to the html events</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span>
+<span class="boring">fn main() {
+</span>// ...
+            html! {
+                &lt;button onclick=self.link.callback( |_| Msg::Click)&gt;{&quot;Click here!&quot;}&lt;/button&gt;
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h2><a class="header" href="#description-the-component-could-expose-property-attributes-to-receive-data-from-the-parent-html-component" id="description-the-component-could-expose-property-attributes-to-receive-data-from-the-parent-html-component">description: The component could expose property attributes to receive data from the parent html component</a></h2>
+<h1><a class="header" href="#properties" id="properties">Properties</a></h1>
+<p>It’s good practice to divide up your application into multiple components and split them across different files. As your application becomes larger, this quickly becomes essential. For these components to be able to communicate with each other, components have properties – these are values which parent components pass to child components.</p>
+<p>A component's properties should be defined using a separate struct which derives <code>Properties</code> and <code>Clone</code> traits.</p>
+<blockquote>
+<p>The <code>Properties</code> trait requires that the <code>Clone</code> trait is implemented for all types for which <code>Properties</code> is derived.</p>
+</blockquote>
+<blockquote>
+<p>It is common for this struct to be named <code>Props</code></p>
+</blockquote>
+<p>Properties may be defined as:</p>
+<ul>
+<li>optional and initialized with Rust default value</li>
+<li>optional and initialized with component default value</li>
+<li>mandatory, the parent must define a value for the attribute</li>
+</ul>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct UseOfPropertyComponent {
+    link: ComponentLink&lt;Self&gt;,
+    props: Props,
+    name: String,
+    show_message: bool,
+}
+
+pub enum Msg {
+    Click,
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    pub name: String,
+}
+
+impl Component for UseOfPropertyComponent {
+    type Message = Msg;
+    type Properties = Props;
+
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+        }
+        true
+    }
+
+    fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+        if self.props != props {
+            self.props = props;
+            true
+        } else {
+            false
+        }
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        if !self.show_message {
+            html! {
+                &lt;button onclick=self.link.callback( |_| Msg::Click )&gt;{&quot;Click here!&quot;}&lt;/button&gt;
+            }
+        } else {
+            html! {
+                &lt;h1&gt;{format!(&quot;Hello {}&quot;,self.name)}&lt;/h1&gt;
+            }
+        }
+    }
+}
+
+<span class="boring">}
+</span></code></pre></pre>
+<p>In order to use this component you have to:</p>
+<pre><code class="language-html">// ...
+    &lt;div class=&quot;full-height&quot;&gt;
+        {&quot;In this example we pass the name as parameter of the Yew component.&quot;}
+        &lt;UseOfPropertyComponent name=&quot;Clark&quot;/&gt;
+    &lt;/div&gt;
+// ...
+
+</code></pre>
+<h2><a class="header" href="#defining-the-properties-struct" id="defining-the-properties-struct">Defining the properties struct</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    pub name: String,
+}
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#attaching-the-properties-to-the-state" id="attaching-the-properties-to-the-state">Attaching the properties to the state</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+pub struct UseOfPropertyComponent {
+    link: ComponentLink&lt;Self&gt;,
+    props: Props,
+    name: String,
+    show_message: bool,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#initializing-the-properties" id="initializing-the-properties">Initializing the properties</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<blockquote>
+<p>Here, to simply extend the previous example, we clone the value of the <code>props</code> argument. It may not be needed in your code</p>
+</blockquote>
+<h2><a class="header" href="#defining-property-attributes" id="defining-property-attributes">Defining property attributes</a></h2>
+<h3><a class="header" href="#optional-property" id="optional-property">Optional property</a></h3>
+<p>Property can be defined optional just adding <code>#[prop_or_default]</code> on the property. In that case the property value will be initialized by the default Rust type value.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or_default]
+    pub name: String,
+}
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<p>In that case we will just say &quot;Hello&quot; ;-)</p>
+<h3><a class="header" href="#optional-property-with-component-default-value" id="optional-property-with-component-default-value">Optional property with component default value</a></h3>
+<p>A property can be defined as an optional property. In this case, it becomes necessary to define a default component value. Yew will automatically use this value if it is not provided when the component is initialized. Such properties should be annotated with the #[prop_or_(default_value)] attribute where default_value specifies the value which Yew should use.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Clark by default&quot;.to_string())]
+    pub name: String,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<p>In that case we will say &quot;Hello Clark by default&quot; ;-)</p>
+<h3><a class="header" href="#mandatory-property" id="mandatory-property">Mandatory property</a></h3>
+<p>If no attribute is defined the property will be &quot;mandatory&quot;. So, if the property is omitted a compilation error is raised. The error looks like:</p>
+<blockquote>
+<p>no method named <code>build</code> found for struct <code>components::comp4::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code> in the current scope
+method not found in <code>...::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code>rustc(E0599)
+comp4.rs(14, 10): method <code>build</code> not found for this`</p>
+</blockquote>
+<h2><a class="header" href="#optimizing-rendering-in-the-change-method" id="optimizing-rendering-in-the-change-method">Optimizing rendering in the <code>change</code> method</a></h2>
+<p>In order to avoid unecessary rendering it's possible to compare the mutation of the <code>props</code> bag in the <code>change</code> method.
+This optimization imply to derive <code>PartialEq</code> for the <code>Props</code> struct to easily compare the <code>props</code> bag passed as argument of the method and the one in the internal state of the component.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+     fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+         if self.props != props {
+             self.props = props;
+             true
+         } else {
+             false
+         }
+     }
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#memoryspeed-overhead-of-using-properties" id="memoryspeed-overhead-of-using-properties">Memory/speed overhead of using Properties</a></h2>
+<p>In <code>Component::view</code>, you take a reference to the component's state, and use that to create <code>Html</code>. Properties, however, are owned values. This means that in order to create them and pass them to child components, we need to take ownership of the references provided in the <code>view</code> function. This is done by implicitly cloning the references as they are passed to components in order to get owned values.</p>
+<p>This means that each component has its own distinct copy of the state passed down from its parent, and that whenever you re-render a component, the props for all child components of the re-rendering component will have to be cloned.</p>
+<p>The implication of this is if you would otherwise be passing <em>huge</em> amounts of data down as props (Strings that are 10s of kilobytes in size), you may want to consider turning your child component into a function which returns <code>Html</code> that the parent calls, as this means that data does not have to be cloned.</p>
+<p>If you won't need to modify the data passed down through props you can wrap it in an <code>Rc</code> so that only a reference-counted pointer to the data is cloned, instead of the actual data itself.</p>
+<h3><a class="header" href="#example" id="example">Example</a></h3>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use std::rc::Rc;
+use yew::Properties;
+
+#[derive(Clone, PartialEq)]
+pub enum LinkColor {
+    Blue,
+    Red,
+    Green,
+    Black,
+    Purple,
+}
+
+impl Default for LinkColor {
+    fn default() -&gt; Self {
+        // The link color will be blue unless otherwise specified.
+        LinkColor::Blue
+    }
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct LinkProps {
+    /// The link must have a target.
+    href: String,
+    /// If the link text is huge, this will make copying the string much cheaper.
+    /// This isn't usually recommended unless performance is known to be a problem.
+    text: Rc&lt;String&gt;,
+    /// Color of the link.
+    #[prop_or_default]
+    color: LinkColor,
+    /// The view function will not specify a size if this is None.
+    #[prop_or_default]
+    size: Option&lt;u32&gt;,
+    /// When the view function doesn't specify active, it defaults to true.
+    #[prop_or(true)]
+    active: bool,
+}
+<span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h2><a class="header" href="#description-component-could-share-update-to-the-parent-html-component-emitting-events" id="description-component-could-share-update-to-the-parent-html-component-emitting-events">description: Component could share update to the parent html component emitting events</a></h2>
+<h1><a class="header" href="#emit-events" id="emit-events">Emit events</a></h1>
+<p>It's possible to update the parent html component emitting <strong>events</strong> in the same way we received data via <strong>properties</strong>.</p>
+<p>The events are defined as part of the <code>Properties</code> struct.</p>
+<p>When it's needed you just need to call the <code>emit()</code> method of the event, to propagate the update to the parents containers.</p>
+<blockquote>
+<p>You can name the event however you want to. It's usually started by &quot;on&quot;</p>
+</blockquote>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct EmitEventComponent {
+    link: ComponentLink&lt;Self&gt;,
+    props: Props,
+    name: String,
+    show_message: bool,
+}
+
+pub enum Msg {
+    Click,
+    Click4Event,
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Clark by default&quot;.to_string())]
+    pub name: String,
+
+    #[prop_or_default]
+    pub onmyclickevent:Callback&lt;String&gt;,
+}
+
+impl Component for EmitEventComponent {
+    type Message = Msg;
+    type Properties = Props;
+
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+            Msg::Click4Event =&gt; self.props.onmyclickevent.emit(&quot;Hello Loise&quot;.into()),
+        }
+        true
+    }
+
+    fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+        if self.props != props {
+            self.props = props;
+            true
+        } else {
+            false
+        }
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        if !self.show_message {
+            html! {
+                &lt;button onclick=self.link.callback( |_| Msg::Click )&gt;{&quot;Click here!&quot;}&lt;/button&gt;
+            }
+        } else {
+            html! {
+                &lt;&gt;
+                    {&quot;Click on clark to raised an event for the parent container ;-)&quot;}
+                    &lt;h1 onclick=self.link.callback( |_| Msg::Click4Event) &gt;
+                    {format!(&quot;Hello {}&quot;,self.name)}&lt;/h1&gt;
+                &lt;/&gt;
+            }
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#define-the-event" id="define-the-event">Define the Event</a></h2>
+<p>Here we are defining a new event named <code>onmyclickevent</code> with a <code>String</code> as parameter.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Clark by default&quot;.to_string())]
+    pub name: String,
+    #[prop_or_default]
+    pub onmyclickevent:Callback&lt;String&gt;,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#emit-the-event" id="emit-the-event">Emit the Event</a></h2>
+<p>The event are usually emitted in the <code>update()</code> method as effect of message</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+            Msg::Click4Event =&gt; self.props.onmyclickevent.emit(&quot;Hello Loise&quot;.into()),
+        }
+        true
+    }
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#mandatory-or-optionally-binded-events" id="mandatory-or-optionally-binded-events">Mandatory or optionally binded events</a></h2>
+<p>Like for properties you can define the events to be be mandatory or optionaly binded in the parent component.</p>
+<p>This is defined providing or not attributes to the event definition.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Clark by default&quot;.to_string())]
+    pub name: String,
+
+    pub on_i_am_mandatory_event:Callback&lt;()&gt;,
+
+    #[prop_or_default]
+    pub on_i_am_optional_event:Callback&lt;()&gt;,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<p>Like for the properties a compilation error will be raised in case you omitted to bind a mandatory event. The message could be something like:</p>
+<blockquote>
+<p>no method named <code>build</code> found for struct <code>components::comp4::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code> in the current scope
+method not found in <code>...::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code>rustc(E0599)
+comp4.rs(14, 10): method <code>build</code> not found for this`</p>
+</blockquote>
+<h1><a class="header" href="#nested-components" id="nested-components">Nested components</a></h1>
+<hr />
+<h2><a class="header" href="#description-create-complex-layouts-with-component-hierarchies" id="description-create-complex-layouts-with-component-hierarchies">description: Create complex layouts with component hierarchies</a></h2>
+<h1><a class="header" href="#components-1" id="components-1">Components</a></h1>
+<h2><a class="header" href="#basic" id="basic">Basic</a></h2>
+<p>Any type that implements <code>Component</code> can be used in the <code>html!</code> macro:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html!{
+    &lt;&gt;
+        // No properties
+        &lt;MyComponent /&gt;
+
+        // With Properties
+        &lt;MyComponent prop1=&quot;lorem&quot; prop2=&quot;ipsum&quot; /&gt;
+
+        // With the whole set of props provided at once
+        &lt;MyComponent with props /&gt;
+    &lt;/&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#nested" id="nested">Nested</a></h2>
+<p>Components can be passed children if they have a <code>children</code> field in their <code>Properties</code>.</p>
+<p>{% code title=&quot;parent.rs&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;Container&gt;
+        &lt;h4&gt;{ &quot;Hi&quot; }&lt;/h4&gt;
+        &lt;div&gt;{ &quot;Hello&quot; }&lt;/div&gt;
+    &lt;/Container&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<p>{% code title=&quot;container.rs&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>pub struct Container(Props);
+
+#[derive(Properties)]
+pub struct Props {
+    pub children: Children,
+}
+
+impl Component for Container {
+    type Properties = Props;
+
+    // ...
+
+    fn view(&amp;self) -&gt; Html {
+       html! {
+           &lt;div id=&quot;container&quot;&gt;
+               { self.0.children.render() }
+           &lt;/div&gt;
+       }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<h2><a class="header" href="#nested-children-with-props" id="nested-children-with-props">Nested Children with Props</a></h2>
+<p>Nested component properties can be accessed and mutated if the containing component types its children. In the following example, the <code>List</code> component can wrap <code>ListItem</code> components. For a real world example of this pattern, check out the <code>yew-router</code> source code. For a more advanced example, check out the <code>nested-list</code> example in the main yew repository.</p>
+<p>{% code title=&quot;parent.rs&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>html! {
+    &lt;List&gt;
+        &lt;ListItem value=&quot;a&quot; /&gt;
+        &lt;ListItem value=&quot;b&quot; /&gt;
+        &lt;ListItem value=&quot;c&quot; /&gt;
+    &lt;/List&gt;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<p>{% code title=&quot;list.rs&quot; %}</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>pub struct List(Props);
+
+#[derive(Properties)]
+pub struct Props {
+    pub children: ChildrenWithProps&lt;ListItem&gt;,
+}
+
+impl Component for List {
+    type Properties = Props;
+
+    // ...
+
+    fn view(&amp;self) -&gt; Html {
+        html!{{
+            for self.0.children.iter().map(|mut item| {
+                item.props.value = format!(&quot;item-{}&quot;, item.props.value);
+                item
+            })
+        }}
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% endcode %}</p>
+<hr />
+<h2><a class="header" href="#description-out-of-band-dom-access" id="description-out-of-band-dom-access">description: Out-of-band DOM access</a></h2>
+<h1><a class="header" href="#refs" id="refs">Refs</a></h1>
+<h2><a class="header" href="#refs-1" id="refs-1">Refs</a></h2>
+<p>The <code>ref</code> keyword can be used inside of any HTML element or component to get the DOM <code>Element</code> that the item is attached to. This can be used to make changes to the DOM outside of the <code>view</code> lifecycle method.</p>
+<p>This is useful for getting ahold of canvas elements, or scrolling to different sections of a page.</p>
+<p>The syntax is:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// In create
+self.node_ref = NodeRef::default();
+
+// In view
+html! {
+    &lt;div ref=self.node_ref.clone()&gt;&lt;/div&gt;
+}
+
+// In update
+let has_attributes = self.node_ref.try_into::&lt;Element&gt;().has_attributes();
+<span class="boring">}
+</span></code></pre></pre>
+<h1><a class="header" href="#styling" id="styling">Styling</a></h1>
+<p>&lt;Work in progress&gt;</p>
+<p>A proposal for proper CSS support can be found here: <a href="https://github.com/yewstack/yew/issues/533">https://github.com/yewstack/yew/issues/533</a></p>
+<p>In the meantime you can define the style with any standard CSS tools.</p>
+<hr />
+<h2><a class="header" href="#description-component-life-cycle" id="description-component-life-cycle">description: Component life cycle</a></h2>
+<h1><a class="header" href="#life-cycle" id="life-cycle">Life cycle</a></h1>
+<p>{% hint style=&quot;info&quot; %}
+<code>Contribute to our docs:</code> <a href="https://github.com/yewstack/docs/issues/22">Add a diagram of the component lifecycle</a>
+{% endhint %}</p>
+<h2><a class="header" href="#lifecycle-methods" id="lifecycle-methods">Lifecycle Methods</a></h2>
+<h3><a class="header" href="#create" id="create">Create</a></h3>
+<p>When a component is created, it receives properties from its parent component as well as a <code>ComponentLink</code>. The properties can be used to initialize the component's state and the &quot;link&quot; can be used to register callbacks or send messages to the component.</p>
+<p>It is common to store the props and the link in your component struct, like so:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>pub struct MyComponent {
+    props: Props,
+    link: ComponentLink&lt;Self&gt;,
+}
+
+impl Component for MyComponent {
+    type Properties = Props;
+    // ...
+
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        MyComponent { props, link }
+    }
+
+    // ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#view" id="view">View</a></h3>
+<p>Components declare their layout in the <code>view()</code> method. Yew provides the <code>html!</code> macro for declaring HTML and SVG nodes and their listeners as well as child components. The macro acts a lot like React's JSX, but uses Rust expressions instead of JavaScript.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>impl Component for MyComponent {
+    // ...
+
+    fn view(&amp;self) -&gt; Html {
+        let onclick = self.link.callback(|_| Msg::Click);
+        html! {
+            &lt;button onclick=onclick&gt;&lt;/button&gt;
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>For usage details, check out the <code>html!</code> guide:</p>
+<p>{% page-ref page=&quot;../html/&quot; %}</p>
+<h3><a class="header" href="#rendered" id="rendered">Rendered</a></h3>
+<p>The <code>rendered()</code> component lifecycle method is called after <code>view()</code> is processed and Yew has rendered your component, but before the browser refreshes the page. A component may wish to implement this method to perform actions that can only be done after the component has rendered elements. You can check whether this is the first time the component was rendered via the <code>first_render</code> parameter.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use stdweb::web::html_element::InputElement;
+use stdweb::web::IHtmlElement;
+use yew::prelude::*;
+
+pub struct MyComponent {
+    node_ref: NodeRef,
+}
+
+impl Component for MyComponent {
+    // ...
+
+    fn view(&amp;self) -&gt; Html {
+        html! {
+            &lt;input ref=self.node_ref.clone() type=&quot;text&quot; /&gt;
+        }
+    }
+
+    fn rendered(&amp;mut self, first_render: bool) {
+        if first_render {
+            if let Some(input) = self.node_ref.try_into::&lt;InputElement&gt;() {
+                input.focus();
+            }
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>{% hint style=&quot;info&quot; %}
+Note that this lifecycle method does not require an implementation and will do nothing by default
+{% endhint %}</p>
+<h3><a class="header" href="#update" id="update">Update</a></h3>
+<p>Components are dynamic and can register to receive asynchronous messages. The <code>update()</code> lifecycle method is called for each message. This allows the component to update itself based on what the message was, and determine if it needs to re-render itself. Messages can be triggered by HTML elements listeners or be sent by child components, Agents, Services, or Futures.</p>
+<p>Here's an example of what <code>update()</code> could look like:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>pub enum Msg {
+    SetInputEnabled(bool)
+}
+
+impl Component for MyComponent {
+    type Message = Msg;
+
+    // ...
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+       match msg {
+           Msg::SetInputEnabled(enabled) =&gt; {
+               if self.input_enabled != enabled {
+                   self.input_enabled = enabled;
+                   true // Re-render
+               } else {
+                   false
+               }
+           }
+       }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#change" id="change">Change</a></h3>
+<p>Components may be re-rendered by their parents. When this happens, they could receive new properties and choose to re-render. This design facilitates parent to child component communication through changed properties. You don't have to implement <code>change()</code> but you probably want to if you want to update a component via props after it has been created.</p>
+<p>A naive implementation would look like:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>impl Component for MyComponent {
+    // ...
+
+    fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+       self.props = props;
+       true // This will always re-render when new props are provided.
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#destroy" id="destroy">Destroy</a></h3>
+<p>After Components are unmounted from the DOM, Yew calls the <code>destroy()</code> lifecycle method to support any necessary clean up operations. This method is optional and does nothing by default.</p>
+<h2><a class="header" href="#associated-types" id="associated-types">Associated Types</a></h2>
+<p>The <code>Component</code> trait has two associated types: <code>Message</code> and <code>Properties</code>.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>impl Component for MyComponent {
+    type Message = Msg;
+    type Properties = Props;
+
+    // ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>Message</code> represents a variety of messages that can be processed by the component to trigger some side effect. For example, you may have a <code>Click</code> message which triggers an API request or toggles the appearance of a UI component. It is common practice to create an enum called <code>Msg</code> in your component's module and use that as the message type in the component. It is common to shorten &quot;message&quot; to &quot;msg&quot;.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>enum Msg {
+    Click,
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>Properties</code> represents the information passed to a component from its parent. This type must implements the <code>Properties</code> trait (usually by deriving it) and can specify whether certain properties are required or optional. This type is used when creating and updating a component. It is common practice to create a struct called <code>Props</code> in your component's module and use that as the component's <code>Properties</code> type. It is common to shorten &quot;properties&quot; to &quot;props&quot;. Since props are handed down from parent components, the root component of your application typically has a <code>Properties</code> type of <code>()</code>. If you wish to specify properties for your root component, use the <code>App::mount_with_props</code> method.</p>
+<hr />
+<h2><a class="header" href="#description-componentlink-and-callbacks" id="description-componentlink-and-callbacks">description: ComponentLink and Callbacks.</a></h2>
+<h1><a class="header" href="#callbacks" id="callbacks">Callbacks</a></h1>
+<p>The component &quot;link&quot; is the mechanism through which components are able to register callbacks and update themselves.</p>
+<h2><a class="header" href="#componentlink-api" id="componentlink-api">ComponentLink API</a></h2>
+<h3><a class="header" href="#callback" id="callback">callback</a></h3>
+<p>Registers a callback that will send a message to the component's update mechanism when it is executed. Under the hood, it will call <code>send_self</code> with the message that is returned by the provided closure. A <code>Fn(IN) -&gt; Vec&lt;COMP::Message&gt;</code> is provided and a <code>Callback&lt;IN&gt;</code> is returned.</p>
+<h3><a class="header" href="#send_message" id="send_message">send_message</a></h3>
+<p>Sends a message to the component immediately after the current loop finishes, causing another update loop to initiate.</p>
+<h3><a class="header" href="#send_message_batch" id="send_message_batch">send_message_batch</a></h3>
+<p>Registers a callback that sends a batch of many messages at once when it is executed. If any of the messages cause the component to re-render, the component will re-render after all messages in the batch have been processed. A <code>Fn(IN) -&gt; COMP::Message</code> is provided and a <code>Callback&lt;IN&gt;</code> is returned.</p>
+<h2><a class="header" href="#callbacks-1" id="callbacks-1">Callbacks</a></h2>
+<p><em>(This might need its own short page.)</em></p>
+<p>Callbacks are used to communicate with services, agents, and parent components within Yew. They are just a <code>Fn</code> wrapped by an <code>Rc</code> to allow them to be cloned.</p>
+<p>They have an <code>emit</code> function that takes their <code>&lt;IN&gt;</code> type as an argument and converts that to a message expected by its destination. If a callback from a parent is provided in props to a child component, the child can call <code>emit</code> on the callback in its <code>update</code> lifecycle hook to send a message back to its parent. Closures or Functions provided as props inside the <code>html!</code> macro are automatically converted to Callbacks.</p>
+<hr />
+<h2><a class="header" href="#description-yews-actor-system" id="description-yews-actor-system">description: Yew's Actor System</a></h2>
+<h1><a class="header" href="#agents" id="agents">Agents</a></h1>
+<p>Agents are similar to Angular's <a href="https://angular.io/guide/architecture-services">Services</a> (but without dependency injection), and provide a Yew with an <a href="https://en.wikipedia.org/wiki/Actor_model">Actor Model</a>. Agents can be used to route messages between components independently of where they sit in the component hierarchy, or they can be used to create a global state, and they can also be used to offload computationally expensive tasks from the main thread which renders the UI. There is also planned support for using agents to allow Yew applications to communicate accross tabs (in the future).</p>
+<p>In order for agents to run concurrently, Yew uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web-workers</a>.</p>
+<h2><a class="header" href="#lifecycle" id="lifecycle">Lifecycle</a></h2>
+<p><img src="https://user-images.githubusercontent.com/42674621/79125224-b6481d80-7d95-11ea-8e6a-ab9b52d1d8ac.png" alt="Agent lifecycle" /></p>
+<h2><a class="header" href="#types-of-agents" id="types-of-agents">Types of Agents</a></h2>
+<h4><a class="header" href="#reaches" id="reaches">Reaches</a></h4>
+<ul>
+<li>Job - Spawn a new agent on the UI thread for every new bridge. This is good for moving shared but independent behavior that communicates with the browser out of components. (TODO verify) When the task is done, the agent will disappear.</li>
+<li>Context - Bridges will spawn or connect to an agent on the UI thread. This can be used to coordinate with state between components or other agents. When no bridges are connected to this agent, the agent will disappear.</li>
+<li>Private - Same as Job, but runs on its own web worker. </li>
+<li>Public - Same as Context, but runs on its own web worker.</li>
+<li>Global (WIP)</li>
+</ul>
+<h2><a class="header" href="#communication-between-agents-and-components" id="communication-between-agents-and-components">Communication between Agents and Components</a></h2>
+<h3><a class="header" href="#bridges" id="bridges">Bridges</a></h3>
+<p>A bridge allows bi-directional communication between an agent and a component. Bridges also allow agents to communicate with one another.</p>
+<h3><a class="header" href="#dispatchers" id="dispatchers">Dispatchers</a></h3>
+<p>A dispatcher allows uni-directional communication between a component and an agent. A bridge allows a component to send messages to an agent.</p>
+<h2><a class="header" href="#overhead" id="overhead">Overhead</a></h2>
+<p>Agents communicate by serializing their messages using <a href="https://github.com/servo/bincode">bincode</a>. So there is a higher performance cost than just calling functions. Unless the cost of computation or the need to coordinate across arbitrary components will outweigh the cost of message passing, you should contain your logic to functions where possible.</p>
+<h2><a class="header" href="#further-reading" id="further-reading">Further reading</a></h2>
+<ul>
+<li>The <a href="https://github.com/yewstack/yew/tree/master/examples/pub_sub">pub_sub</a> example shows how components can use agents to communicate with each other.</li>
+</ul>
+<hr />
+<h2><a class="header" href="#description-yews-glue-to-browser-apis" id="description-yews-glue-to-browser-apis">description: Yew's glue to browser APIs.</a></h2>
+<h1><a class="header" href="#services" id="services">Services</a></h1>
+<h1><a class="header" href="#format" id="format">Format</a></h1>
+<p>{% hint style=&quot;info&quot; %}
+<code>Contribute to our docs:</code> <a href="https://github.com/yewstack/docs/issues/24">Explain the format module in depth</a>
+{% endhint %}</p>
+<hr />
+<h2><a class="header" href="#description-yews-official-router" id="description-yews-official-router">description: Yew's official router</a></h2>
+<h1><a class="header" href="#router" id="router">Router</a></h1>
+<p><a href="https://crates.io/crates/yew-router">https://crates.io/crates/yew-router</a></p>
+<p>Routers in Single Page Applications (SPA) handle displaying different pages depending on what the URL is. Instead of the default behavior of requesting a different remote resource when a link is clicked, the router instead sets the URL locally to point to a valid route in your application. The router then detects this change and then decides what to render.</p>
+<h2><a class="header" href="#core-elements" id="core-elements">Core Elements</a></h2>
+<h3><a class="header" href="#route" id="route">Route</a></h3>
+<p>Contains a String representing everything after the domain in the url and optionally the state stored in the history api.</p>
+<h3><a class="header" href="#routeservice" id="routeservice">RouteService</a></h3>
+<p>Communicates with the browser to get and set Routes.</p>
+<h3><a class="header" href="#routeagent" id="routeagent">RouteAgent</a></h3>
+<p>Owns a RouteService and is used to coordinate updates when the route changes, either from within the application logic or from an event fired from the browser.</p>
+<h3><a class="header" href="#switch" id="switch">Switch</a></h3>
+<p>The <code>Switch</code> trait is used to convert a <code>Route</code> to and from the implementer of this trait.</p>
+<h3><a class="header" href="#router-1" id="router-1">Router</a></h3>
+<p>The Router component communicates with <code>RouteAgent</code> and will automatically resolve Routes it gets from the agent into switches, which it will expose via a <code>render</code> prop that allows specifying how the resulting switch gets converted to <code>Html</code>.</p>
+<h2><a class="header" href="#how-to-use-the-router" id="how-to-use-the-router">How to use the Router</a></h2>
+<p>First, you want to create a type that represents all the states of your application. Do note that while this typically is an enum, structs are supported as well, and that you can nest other items that implement <code>Switch</code> inside.</p>
+<p>Then you should derive <code>Switch</code> for your type. For enums, every variant must be annotated with <code>#[to = &quot;/some/route&quot;]</code>, or if you use a struct instead, that must appear outside the struct declaration.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>#[derive(Switch)]
+enum AppRoute {
+  #[to=&quot;/login&quot;]
+  Login,
+  #[to=&quot;/register&quot;]
+  Register,
+  #[to=&quot;/delete_account&quot;]
+  Delete, 
+  #[to=&quot;/posts/{id}&quot;]
+  ViewPost(i32),
+  #[to=&quot;/posts/view&quot;]
+  ViewPosts,
+  #[to=&quot;/&quot;]
+  Home
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Do note that the implementation generated by the derive macro for <code>Switch</code> will try to match each variant in order from first to last, so if any route could possibly match two of your specified <code>to</code> annotations, then the first one will match, and the second will never be tried. For example, if you defined the following <code>Switch</code>, the only route that would be matched would be <code>AppRoute::Home</code>.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>#[derive(Switch)]
+enum AppRoute {
+  #[to=&quot;/&quot;]
+  Home,
+  #[to=&quot;/login&quot;]
+  Login,
+  #[to=&quot;/register&quot;]
+  Register,
+  #[to=&quot;/delete_account&quot;]
+  Delete, 
+  #[to=&quot;/posts/{id}&quot;]
+  ViewPost(i32),
+  #[to=&quot;/posts/view&quot;]
+  ViewPosts,
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>You can also capture sections using variations of <code>{}</code> within your <code>#[to = &quot;&quot;]</code> annotation. <code>{}</code> means capture text until the next separator (either &quot;/&quot;, &quot;?&quot;, &quot;&amp;&quot;, or &quot;#&quot; depending on the context). <code>{*}</code> means capture text until the following characters match, or if no characters are present, it will match anything. <code>{&lt;number&gt;}</code> means capture text until the specified number of separators are encountered (example: <code>{2}</code> will capture until two separators are encountered).</p>
+<p>For structs and enums with named fields, you must specify the field's name within the capture group like so: <code>{user_name}</code> or <code>{*:age}</code>.</p>
+<p>The Switch trait works with capture groups that are more structured than just Strings. You can specify any type that implements <code>Switch</code>. So you can specify that the capture group is a <code>usize</code>, and if the captured section of the URL can't be converted to it, then the variant won't match.</p>
+<hr />
+<h2><a class="header" href="#description-make-your-app-faster" id="description-make-your-app-faster">description: Make your app faster.</a></h2>
+<h1><a class="header" href="#optimizations--best-practices" id="optimizations--best-practices">Optimizations &amp; Best Practices</a></h1>
+<h2><a class="header" href="#neq_assign" id="neq_assign">neq_assign</a></h2>
+<p>When a component receives props from its parent component, the <code>change</code> method is called. This, in addition to allowing you to update the component's state, also allows you to return a <code>ShouldRender</code> boolean value that indicates if the component should re-render itself in response to the prop changes.</p>
+<p>Re-rendering is expensive, and if you can avoid it, you should. As a general rule, you only want to re-render when the props actually changed. The following block of code represents this rule, returning <code>true</code> if the props differed from the previous props:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::ShouldRender;
+
+#[derive(PartialEq)]
+struct ExampleProps;
+
+struct Example {
+    props: ExampleProps,
+};
+
+impl Example {
+    fn change(&amp;mut self, props: ExampleProps) -&gt; ShouldRender {
+        if self.props != props {
+            self.props = props;
+            true
+        } else {
+            false
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>But we can go further! This is six lines of boilerplate can be reduced down to one by using a trait and a blanket implementation for anything that implements <code>PartialEq</code>. Check out the <code>yewtil</code> crate's <code>NeqAssign</code> trait <a href="https://docs.rs/yewtil/*/yewtil/trait.NeqAssign.html">here</a>.</p>
+<h2><a class="header" href="#rc" id="rc">RC</a></h2>
+<p>In an effort to avoid cloning large chunks of data to create props when re-rendering, we can use smart pointers to only clone the pointer instead. If you use <code>Rc&lt;_&gt;</code>s in your props and child components instead of plain unboxed values, you can delay cloning until you need to modify the data in the child component, where you use <code>Rc::make_mut</code> to clone and get a mutable reference to the data you want to alter. By not cloning until mutation, child components can reject props identical to their state-owned props in <code>Component::change</code> for almost no performance cost, versus the case where the data itself needs to be copied into the props struct in the parent before it is compared and rejected in the child.</p>
+<p>This optimization is most useful for data types that aren't <code>Copy</code>. If you can copy your data easily, then it probably isn't worth putting it behind a smart pointer. For structures that can contain lots of data like <code>Vec</code>, <code>HashMap</code>, and <code>String</code>, this optimization should be worthwhile.</p>
+<p>This optimization works best if the values are never updated by the children, and even better, if they are rarely updated by parents. This makes <code>Rc&lt;_&gt;s</code> a good choice for wrapping property values in for pure components.</p>
+<h2><a class="header" href="#view-functions" id="view-functions">View Functions</a></h2>
+<p>For code readability reasons, it often makes sense to migrate sections of <code>html!</code> to their own functions so you can avoid the rightward drift present in deeply nested HTML.</p>
+<h2><a class="header" href="#pure-componentsfunction-components" id="pure-componentsfunction-components">Pure Components/Function Components</a></h2>
+<p>Pure components are components that don't mutate their state, only displaying content and propagating messages up to normal, mutable components. They differ from view functions in that they can be used from within the <code>html!</code> macro using the component syntax (<code>&lt;SomePureComponent /&gt;</code>) instead of expression syntax (<code>{some_view_function()}</code>), and that depending on their implementation, they can be memoized - preventing re-renders for identical props using aforementioned <code>neq_assign</code> logic.</p>
+<p>Yew doesn't natively support pure or function components, but they are available via external crates.</p>
+<p>Function components don't exist yet, but in theory, pure components could be generated by using proc macros and annotating functions.</p>
+<h2><a class="header" href="#keyed-dom-nodes-when-they-arrive" id="keyed-dom-nodes-when-they-arrive">Keyed DOM nodes when they arrive</a></h2>
+<h2><a class="header" href="#compile-speed-optimizations-using-cargo-workspaces" id="compile-speed-optimizations-using-cargo-workspaces">Compile speed optimizations using Cargo Workspaces</a></h2>
+<p>Arguabley, the largest drawback to using Yew is the long time it takes to compile. Compile time seems to correlate with the quantity of code found within <code>html!</code> macro blocks. This tends to not be a significant problem for smaller projects, but for webapps that span multiple pages, it makes sense to break apart your code across multiple crates to minimize the amount of work the compiler has to do.</p>
+<p>You should try to make your main crate handle routing/page selection, move all commonly shared code to another crate, and then make a different crate for each page, where each page could be a different component, or just a big function that produces <code>Html</code>. In the best case scenario, you go from rebuilding all of your code on each compile to rebuilding only the main crate, and one of your page crates. In the worst case, where you edit something in the &quot;common&quot; crate, you will be right back to where you started: compiling all code that depends on that commonly shared crate, which is probably everything else.</p>
+<p>If your main crate is too heavyweight, or you want to rapidly iterate on a deeply nested page (eg. a page that renders on top of another page), you can use an example crate to create a more simple implementation of the main page and render your work-in-progress component on top of that.</p>
+<h2><a class="header" href="#build-size-optimization" id="build-size-optimization">Build size optimization</a></h2>
+<ul>
+<li>optimize Rust code
+<ul>
+<li><code>wee_aloc</code> ( using tiny allocator )</li>
+<li><code>cargo.toml</code> ( defining release profile )</li>
+</ul>
+</li>
+<li>optimize wasm code using <code>wasm-opt</code></li>
+</ul>
+<p>More information about code size profiling: <a href="https://rustwasm.github.io/book/reference/code-size.html#optimizing-builds-for-code-size">rustwasm book</a></p>
+<h3><a class="header" href="#wee_alloc" id="wee_alloc">wee_alloc</a></h3>
+<p><a href="https://github.com/rustwasm/wee_alloc">wee_alloc</a> is a tiny allocator that is much smaller than the allocator that is normally used in Rust binaries. Replacing the default allocator with this one will result in smaller WASM file sizes, at the expense of speed and memory overhead.</p>
+<p>The slower speed and memory overhead are minor in comparison to the size gains made by not including the default allocator. This smaller file size means that your page will load faster, and so it is generally recommended that you use this allocator over the default, unless your app is doing some allocation-heavy work.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// Use `wee_alloc` as the global allocator.
+#[global_allocator]
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#cargotoml" id="cargotoml">Cargo.toml</a></h3>
+<p>It is possible to setup release build for smaller size using <code>[profile.release]</code> section in <code>Cargo.toml</code></p>
+<p><a href="https://doc.rust-lang.org/cargo/reference/profiles.html">Rust profiles documentation</a></p>
+<pre><code class="language-text">[profile.release]
+# less code to include into binary
+panic = 'abort' 
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# optimization for size ( more aggresive )
+opt-level = 'z' 
+# optimization for size 
+# opt-level = 's' 
+# link time optimization using using whole-program analysis
+lto = true
+</code></pre>
+<h3><a class="header" href="#wasm-opt" id="wasm-opt">wasm-opt</a></h3>
+<p>Further more it is possible to optimize size of <code>wasm</code> code.</p>
+<p>wasm-opt info: <a href="https://github.com/WebAssembly/binaryen">binaryen project</a></p>
+<p>The Rust Wasm book features a section about reducing the size of WASM binaries: <a href="https://rustwasm.github.io/book/game-of-life/code-size.html">Shrinking .wasm size</a></p>
+<ul>
+<li>using <code>wasm-pack</code> which by default optimizes <code>wasm</code> code in release builds</li>
+<li>using <code>wasm-opt</code> directly on <code>wasm</code> files.</li>
+</ul>
+<pre><code class="language-text">wasm-opt wasm_bg.wasm -Os -o wasm_bg_opt.wasm
+</code></pre>
+<h4><a class="header" href="#build-size-of-minimal-example-in-yewexamples" id="build-size-of-minimal-example-in-yewexamples">Build size of 'minimal' example in yew/examples/</a></h4>
+<p>Note: <code>wasm-pack</code> combines optimization for Rust and wasm code. <code>wasm-bindgen</code> is in this example without any <code>Rust</code> size optimization.</p>
+<table><thead><tr><th align="left">used tool</th><th align="left">size</th></tr></thead><tbody>
+<tr><td align="left">wasm-bindgen</td><td align="left">158KB</td></tr>
+<tr><td align="left">wasm-binggen + wasm-opt -Os</td><td align="left">116KB</td></tr>
+<tr><td align="left">wasm-pack</td><td align="left">99 KB</td></tr>
+</tbody></table>
+<hr />
+<h2><a class="header" href="#description-low-level-details-about-the-framework" id="description-low-level-details-about-the-framework">description: Low level details about the framework</a></h2>
+<h1><a class="header" href="#low-level-library-internals" id="low-level-library-internals">Low-level library internals</a></h1>
+<p>Component-lifecycle state machine, vdom diff algorithm.</p>
+<hr />
+<h2><a class="header" href="#description-the-planned-feature-roadmap-for-the-yew-framework" id="description-the-planned-feature-roadmap-for-the-yew-framework">description: The planned feature roadmap for the Yew framework</a></h2>
+<h1><a class="header" href="#roadmap" id="roadmap">Roadmap</a></h1>
+<h3><a class="header" href="#prioritization" id="prioritization">Prioritization</a></h3>
+<p>The prioritization of upcoming features and focuses of the framework are determined by the community. In Spring 2020, a developer survey was sent out to collect feedback on the direction of the project. You can find the summary in the <a href="https://github.com/yewstack/yew/wiki/Dev-Survey-%5BSpring-2020%5D">Yew Wiki</a>.</p>
+<p>{% hint style=&quot;info&quot; %}
+Status of all major initiatives can be tracked on the Yew Github <a href="https://github.com/yewstack/yew/projects">Project board</a>
+{% endhint %}</p>
+<h3><a class="header" href="#focuses" id="focuses">Focuses</a></h3>
+<ol>
+<li>Top Requested Features</li>
+<li>Production Readiness</li>
+<li>Documentation</li>
+<li>Pain Points</li>
+</ol>
+<h4><a class="header" href="#top-requested-features" id="top-requested-features">Top Requested Features</a></h4>
+<ol>
+<li><a href="https://github.com/yewstack/yew/projects/3">Functional Components</a></li>
+<li><a href="https://github.com/yewstack/yew/projects/4">Component Library</a></li>
+<li>Better state management</li>
+<li><a href="https://github.com/yewstack/yew/projects/5">Server side rendering</a></li>
+</ol>
+<h4><a class="header" href="#production-readiness" id="production-readiness">Production Readiness</a></h4>
+<ul>
+<li>Improve Yew test coverage</li>
+<li>Reduce binary size</li>
+<li><a href="https://github.com/yewstack/yew/issues/5">Benchmark performance</a></li>
+</ul>
+<h4><a class="header" href="#documentation" id="documentation">Documentation</a></h4>
+<ul>
+<li>Create tutorial</li>
+<li>Simplify project setup</li>
+</ul>
+<h4><a class="header" href="#pain-points" id="pain-points">Pain Points</a></h4>
+<ul>
+<li><a href="https://github.com/yewstack/yew/issues/830">Component boilerplate</a></li>
+<li>Fetch API</li>
+<li>Agents</li>
+</ul>
+<hr />
+<h2><a class="header" href="#description-testing-your-app" id="description-testing-your-app">description: Testing your app</a></h2>
+<h1><a class="header" href="#testing" id="testing">Testing</a></h1>
+<p>&lt;TODO&gt;</p>
+<h2><a class="header" href="#wasm_bingen_test" id="wasm_bingen_test">wasm_bingen_test</a></h2>
+<p>The Rust WASM working group maintains a crate called <a href="https://rustwasm.github.io/docs/wasm-bindgen/wasm-bindgen-test/index.html"><code>wasm_bindgen_test</code></a> which allows you to run tests in a browser in similar fashion to how the built-in <code>#[test]</code> procedural macro works. More information is given in the <a href="https://rustwasm.github.io/docs/wasm-bindgen/wasm-bindgen-test/index.html">Rust WASM working group's documentation</a> for this module.</p>
+<h1><a class="header" href="#debugging" id="debugging">Debugging</a></h1>
+<h2><a class="header" href="#panics" id="panics">Panics</a></h2>
+<p>Please use the <a href="https://github.com/rustwasm/console_error_panic_hook"><code>console_error_panic</code></a> crate for nicer stacktraces with Rust symbols. Note, that it is not compatible with apps built with <code>cargo-web</code>.</p>
+<h2><a class="header" href="#console-logging" id="console-logging">Console Logging</a></h2>
+<p>In general, Wasm web apps are able to interact with Browser APIs, and the <code>console.log</code> api is no exception. There are a few options available:</p>
+<h3><a class="header" href="#a-hrefhttpscratesiocrateswasm-loggerwasm-loggera" id="a-hrefhttpscratesiocrateswasm-loggerwasm-loggera"><a href="https://crates.io/crates/wasm-logger"><code>wasm-logger</code></a></a></h3>
+<p>This crate integrates with the familiar Rust <code>log</code> crate:</p>
+<pre><pre class="playpen"><code class="language-rust">// setup
+fn main() {
+    wasm_logger::init(wasm_logger::Config::default());
+}
+
+// usage
+log::info!(&quot;Update: {:?}&quot;, msg);
+</code></pre></pre>
+<h3><a class="header" href="#a-hrefhttpsdocsrsyew0150yewservicesconsolestructconsoleservicehtmlconsoleservicea" id="a-hrefhttpsdocsrsyew0150yewservicesconsolestructconsoleservicehtmlconsoleservicea"><strong>``</strong><a href="https://docs.rs/yew/0.15.0/yew/services/console/struct.ConsoleService.html"><strong><code>ConsoleService</code></strong></a><strong>``</strong></a></h3>
+<p>This service is included within yew and is available when the <code>&quot;services&quot;</code> feature is enabled:</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// usage
+ConsoleService::new()::info(format!(&quot;Update: {:?}&quot;, msg));
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#source-maps" id="source-maps">Source Maps</a></h2>
+<p>There is currently no first-class support for source maps for Rust / Wasm web apps. This, of course, is subject to change. If this is no longer true or if progress is made, please suggest a change!</p>
+<h3><a class="header" href="#latest-info" id="latest-info">Latest Info</a></h3>
+<p>[Dec 2019] <a href="https://developers.google.com/web/updates/2019/12/webassembly#the_future">Chrome DevTools update</a></p>
+<blockquote>
+<p>There is still quite a bit of work to do though. For example, on the tooling side, Emscripten (Binaryen) and wasm-pack (wasm-bindgen) don’t support updating DWARF information on transformations they perform yet.</p>
+</blockquote>
+<p>[2020] <a href="https://rustwasm.github.io/book/reference/debugging.html#using-a-debugger">Rust Wasm debugging guide</a></p>
+<blockquote>
+<p>Unfortunately, the debugging story for WebAssembly is still immature. On most Unix systems, <a href="http://dwarfstd.org/">DWARF</a> is used to encode the information that a debugger needs to provide source-level inspection of a running program. There is an alternative format that encodes similar information on Windows. Currently, there is no equivalent for WebAssembly.</p>
+</blockquote>
+<p>[2019] <a href="https://rustwasm.github.io/rfcs/007-2019-roadmap.html#debugging">Rust Wasm roadmap</a></p>
+<blockquote>
+<p>Debugging is tricky because much of the story is out of this working group's hands, and depends on both the WebAssembly standardization bodies and the folks implementing browser developer tools instead.</p>
+</blockquote>
+<hr />
+<h2><a class="header" href="#description-libraries-that-can-help-with-yew-development" id="description-libraries-that-can-help-with-yew-development">description: Libraries that can help with yew development</a></h2>
+<h1><a class="header" href="#external-libs" id="external-libs">External Libs</a></h1>
+<h3><a class="header" href="#yewtil" id="yewtil">Yewtil</a></h3>
+<p>Yewtil is a collection of common utilities that help you write Yew programs. It includes:</p>
+<ul>
+<li>NeqAssign - As discussed earlier, is the best way to assign props to ensure minimal re-rendering.</li>
+<li>PureComponents - Components that don't update any of their state. Using NeqAssign under the hood, they act as memoized functions that are called from inside the <code>html!</code> macro like normal components are.</li>
+<li>Lrc - linked list reference counted smart pointer functions like <code>Rc</code> does, but allows for novel data update patterns.</li>
+<li>Mrc/Irc - Mutable/Immutable reference counted smart pointers that function like <code>Rc</code> but are more ergonomic to use within Yew, due to implementing <code>DerefMut</code> and <code>BorrowMut</code>for <code>Mrc</code>. This allows <code>Mrc</code> to be used with <code>NeqAssign</code>. <code>Irc</code> acts as an immutable view into the data, which makes this ideal for holding data used in display-only tasks.</li>
+<li>History - A history tracking wrapper that uses a <code>VecDeque</code> to hold on to previous values that it has represented.</li>
+<li>Futures - Support for running futures that send messages to component update loops.</li>
+<li>Fetch - Abstractions for handling fetch requests made using <code>web_sys</code> and the aforementioned futures feature.</li>
+</ul>
+<h2><a class="header" href="#looking-for" id="looking-for">Looking For</a></h2>
+<p>Libraries that the ecosystem needs, but doesn't have yet.</p>
+<p>Bootstrap/MaterialUi/arbitrary css framework component wrappers.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
