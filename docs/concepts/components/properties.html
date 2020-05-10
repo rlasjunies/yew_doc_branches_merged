@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Properties</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../getting-started/project-setup/index.html"><strong aria-hidden="true">2.</strong> Project Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../getting-started/project-setup/using-wasm-pack.html"><strong aria-hidden="true">2.1.</strong> Using wasm-pack</a></li><li class="chapter-item expanded "><a href="../../getting-started/project-setup/using-wasm-bindgen.html"><strong aria-hidden="true">2.2.</strong> Using wasm-bindgen</a></li><li class="chapter-item expanded "><a href="../../getting-started/project-setup/using-cargo-web.html"><strong aria-hidden="true">2.3.</strong> Using cargo-web</a></li></ol></li><li class="chapter-item expanded "><a href="../../getting-started/starter-templates.html"><strong aria-hidden="true">3.</strong> Starter Templates</a></li><li class="chapter-item expanded "><a href="../../getting-started/build-a-sample-app.html"><strong aria-hidden="true">4.</strong> Build a Sample App</a></li><li class="chapter-item expanded "><a href="../../getting-started/choose-web-library.html"><strong aria-hidden="true">5.</strong> Choose web-sys or stdweb</a></li><li class="chapter-item expanded "><a href="../../getting-started/examples.html"><strong aria-hidden="true">6.</strong> Learn through examples</a></li><li class="chapter-item expanded "><a href="../../concepts/html/index.html"><strong aria-hidden="true">7.</strong> Using html!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../concepts/html/lists.html"><strong aria-hidden="true">7.1.</strong> Lists</a></li><li class="chapter-item expanded "><a href="../../concepts/html/elements.html"><strong aria-hidden="true">7.2.</strong> Elements</a></li><li class="chapter-item expanded "><a href="../../concepts/html/literals-and-expressions.html"><strong aria-hidden="true">7.3.</strong> Literals &amp; Expressions</a></li></ol></li><li class="chapter-item expanded "><a href="../../concepts/components/index.html"><strong aria-hidden="true">8.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../concepts/components/internalstate.html"><strong aria-hidden="true">8.1.</strong> Internal State</a></li><li class="chapter-item expanded "><a href="../../concepts/components/trapevents.html"><strong aria-hidden="true">8.2.</strong> Listen to events</a></li><li class="chapter-item expanded "><a href="../../concepts/components/properties.html" class="active"><strong aria-hidden="true">8.3.</strong> Properties</a></li><li class="chapter-item expanded "><a href="../../concepts/components/emitevents.html"><strong aria-hidden="true">8.4.</strong> Emit events</a></li><li class="chapter-item expanded "><a href="../../concepts/components/nestedcomponents.html"><strong aria-hidden="true">8.5.</strong> Nested component</a></li><li class="chapter-item expanded "><a href="../../concepts/components/refs.html"><strong aria-hidden="true">8.6.</strong> Refs</a></li><li class="chapter-item expanded "><a href="../../concepts/components/styling.html"><strong aria-hidden="true">8.7.</strong> Styling</a></li><li class="chapter-item expanded "><a href="../../concepts/components/lifecycle.html"><strong aria-hidden="true">8.8.</strong> Lifecycle</a></li><li class="chapter-item expanded "><a href="../../concepts/components/callbacks.html"><strong aria-hidden="true">8.9.</strong> Callbacks</a></li></ol></li><li class="chapter-item expanded "><a href="../../concepts/agents.html"><strong aria-hidden="true">9.</strong> Agents</a></li><li class="chapter-item expanded "><a href="../../concepts/services/index.html"><strong aria-hidden="true">10.</strong> Services</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../concepts/services/format.html"><strong aria-hidden="true">10.1.</strong> Format</a></li></ol></li><li class="chapter-item expanded "><a href="../../concepts/router.html"><strong aria-hidden="true">11.</strong> Router</a></li><li class="chapter-item expanded "><a href="../../advanced-topics/optimizations.html"><strong aria-hidden="true">12.</strong> Optimizations &amp; Best Practices</a></li><li class="chapter-item expanded "><a href="../../advanced-topics/how-it-works.html"><strong aria-hidden="true">13.</strong> Low-level library internals</a></li><li class="chapter-item expanded "><a href="../../more/roadmap.html"><strong aria-hidden="true">14.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../../more/testing.html"><strong aria-hidden="true">15.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../../more/debugging.html"><strong aria-hidden="true">16.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../../more/external-libs.html"><strong aria-hidden="true">17.</strong> External Libs</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2><a class="header" href="#description-the-component-could-expose-property-attributes-to-receive-data-from-the-parent-html-component" id="description-the-component-could-expose-property-attributes-to-receive-data-from-the-parent-html-component">description: The component could expose property attributes to receive data from the parent html component</a></h2>
+<h1><a class="header" href="#properties" id="properties">Properties</a></h1>
+<p>It’s good practice to divide up your application into multiple components and split them across different files. As your application becomes larger, this quickly becomes essential. For these components to be able to communicate with each other, components have properties – these are values which parent components pass to child components.</p>
+<p>A component's properties should be defined using a separate struct which derives <code>Properties</code> and <code>Clone</code> traits.</p>
+<blockquote>
+<p>The <code>Properties</code> trait requires that the <code>Clone</code> trait is implemented for all types for which <code>Properties</code> is derived.</p>
+</blockquote>
+<blockquote>
+<p>It is common for this struct to be named <code>Props</code></p>
+</blockquote>
+<p>Properties may be defined as:</p>
+<ul>
+<li>optional and initialized with Rust default value</li>
+<li>optional and initialized with component default value</li>
+<li>mandatory, the parent must define a value for the attribute</li>
+</ul>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use yew::prelude::*;
+
+pub struct UseOfPropertyComponent {
+    link: ComponentLink&lt;Self&gt;,
+    props: Props,
+    name: String,
+    show_message: bool,
+}
+
+pub enum Msg {
+    Click,
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    pub name: String,
+}
+
+impl Component for UseOfPropertyComponent {
+    type Message = Msg;
+    type Properties = Props;
+
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+
+    fn update(&amp;mut self, msg: Self::Message) -&gt; ShouldRender {
+        match msg {
+            Msg::Click =&gt; self.show_message = true,
+        }
+        true
+    }
+
+    fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+        if self.props != props {
+            self.props = props;
+            true
+        } else {
+            false
+        }
+    }
+
+    fn view(&amp;self) -&gt; Html {
+        if !self.show_message {
+            html! {
+                &lt;button onclick=self.link.callback( |_| Msg::Click )&gt;{&quot;Click here!&quot;}&lt;/button&gt;
+            }
+        } else {
+            html! {
+                &lt;h1&gt;{format!(&quot;Hello {}&quot;,self.name)}&lt;/h1&gt;
+            }
+        }
+    }
+}
+
+<span class="boring">}
+</span></code></pre></pre>
+<p>In order to use this component you have to:</p>
+<pre><code class="language-html">// ...
+    &lt;div class=&quot;full-height&quot;&gt;
+        {&quot;In this example we pass the name as parameter of the Yew component.&quot;}
+        &lt;UseOfPropertyComponent name=&quot;Clark&quot;/&gt;
+    &lt;/div&gt;
+// ...
+
+</code></pre>
+<h2><a class="header" href="#defining-the-properties-struct" id="defining-the-properties-struct">Defining the properties struct</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    pub name: String,
+}
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#attaching-the-properties-to-the-state" id="attaching-the-properties-to-the-state">Attaching the properties to the state</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+pub struct UseOfPropertyComponent {
+    link: ComponentLink&lt;Self&gt;,
+    props: Props,
+    name: String,
+    show_message: bool,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#initializing-the-properties" id="initializing-the-properties">Initializing the properties</a></h2>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+    fn create(props: Self::Properties, link: ComponentLink&lt;Self&gt;) -&gt; Self {
+        Self {
+            link,
+            props: props.clone(),
+            name: props.name.into(),
+            show_message: false,
+        }
+    }
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<blockquote>
+<p>Here, to simply extend the previous example, we clone the value of the <code>props</code> argument. It may not be needed in your code</p>
+</blockquote>
+<h2><a class="header" href="#defining-property-attributes" id="defining-property-attributes">Defining property attributes</a></h2>
+<h3><a class="header" href="#optional-property" id="optional-property">Optional property</a></h3>
+<p>Property can be defined optional just adding <code>#[prop_or_default]</code> on the property. In that case the property value will be initialized by the default Rust type value.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or_default]
+    pub name: String,
+}
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<p>In that case we will just say &quot;Hello&quot; ;-)</p>
+<h3><a class="header" href="#optional-property-with-component-default-value" id="optional-property-with-component-default-value">Optional property with component default value</a></h3>
+<p>A property can be defined as an optional property. In this case, it becomes necessary to define a default component value. Yew will automatically use this value if it is not provided when the component is initialized. Such properties should be annotated with the #[prop_or_(default_value)] attribute where default_value specifies the value which Yew should use.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+#[derive(Properties, Clone, PartialEq)]
+pub struct Props{
+    #[prop_or(&quot;Clark by default&quot;.to_string())]
+    pub name: String,
+}
+// ...
+<span class="boring">}
+</span></code></pre></pre>
+<p>In that case we will say &quot;Hello Clark by default&quot; ;-)</p>
+<h3><a class="header" href="#mandatory-property" id="mandatory-property">Mandatory property</a></h3>
+<p>If no attribute is defined the property will be &quot;mandatory&quot;. So, if the property is omitted a compilation error is raised. The error looks like:</p>
+<blockquote>
+<p>no method named <code>build</code> found for struct <code>components::comp4::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code> in the current scope
+method not found in <code>...::PropsBuilder&lt;...PropsBuilderStep_missing_required_prop_name&gt;</code>rustc(E0599)
+comp4.rs(14, 10): method <code>build</code> not found for this`</p>
+</blockquote>
+<h2><a class="header" href="#optimizing-rendering-in-the-change-method" id="optimizing-rendering-in-the-change-method">Optimizing rendering in the <code>change</code> method</a></h2>
+<p>In order to avoid unecessary rendering it's possible to compare the mutation of the <code>props</code> bag in the <code>change</code> method.
+This optimization imply to derive <code>PartialEq</code> for the <code>Props</code> struct to easily compare the <code>props</code> bag passed as argument of the method and the one in the internal state of the component.</p>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>// ...
+     fn change(&amp;mut self, props: Self::Properties) -&gt; ShouldRender {
+         if self.props != props {
+             self.props = props;
+             true
+         } else {
+             false
+         }
+     }
+// ...
+
+<span class="boring">}
+</span></code></pre></pre>
+<h2><a class="header" href="#memoryspeed-overhead-of-using-properties" id="memoryspeed-overhead-of-using-properties">Memory/speed overhead of using Properties</a></h2>
+<p>In <code>Component::view</code>, you take a reference to the component's state, and use that to create <code>Html</code>. Properties, however, are owned values. This means that in order to create them and pass them to child components, we need to take ownership of the references provided in the <code>view</code> function. This is done by implicitly cloning the references as they are passed to components in order to get owned values.</p>
+<p>This means that each component has its own distinct copy of the state passed down from its parent, and that whenever you re-render a component, the props for all child components of the re-rendering component will have to be cloned.</p>
+<p>The implication of this is if you would otherwise be passing <em>huge</em> amounts of data down as props (Strings that are 10s of kilobytes in size), you may want to consider turning your child component into a function which returns <code>Html</code> that the parent calls, as this means that data does not have to be cloned.</p>
+<p>If you won't need to modify the data passed down through props you can wrap it in an <code>Rc</code> so that only a reference-counted pointer to the data is cloned, instead of the actual data itself.</p>
+<h3><a class="header" href="#example" id="example">Example</a></h3>
+<pre><pre class="playpen"><code class="language-rust">
+<span class="boring">#![allow(unused_variables)]
+</span><span class="boring">fn main() {
+</span>use std::rc::Rc;
+use yew::Properties;
+
+#[derive(Clone, PartialEq)]
+pub enum LinkColor {
+    Blue,
+    Red,
+    Green,
+    Black,
+    Purple,
+}
+
+impl Default for LinkColor {
+    fn default() -&gt; Self {
+        // The link color will be blue unless otherwise specified.
+        LinkColor::Blue
+    }
+}
+
+#[derive(Properties, Clone, PartialEq)]
+pub struct LinkProps {
+    /// The link must have a target.
+    href: String,
+    /// If the link text is huge, this will make copying the string much cheaper.
+    /// This isn't usually recommended unless performance is known to be a problem.
+    text: Rc&lt;String&gt;,
+    /// Color of the link.
+    #[prop_or_default]
+    color: LinkColor,
+    /// The view function will not specify a size if this is None.
+    #[prop_or_default]
+    size: Option&lt;u32&gt;,
+    /// When the view function doesn't specify active, it defaults to true.
+    #[prop_or(true)]
+    active: bool,
+}
+<span class="boring">}
+</span></code></pre></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../concepts/components/trapevents.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../concepts/components/emitevents.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../concepts/components/trapevents.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../concepts/components/emitevents.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Agents</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../getting-started/project-setup/index.html"><strong aria-hidden="true">2.</strong> Project Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/project-setup/using-wasm-pack.html"><strong aria-hidden="true">2.1.</strong> Using wasm-pack</a></li><li class="chapter-item expanded "><a href="../getting-started/project-setup/using-wasm-bindgen.html"><strong aria-hidden="true">2.2.</strong> Using wasm-bindgen</a></li><li class="chapter-item expanded "><a href="../getting-started/project-setup/using-cargo-web.html"><strong aria-hidden="true">2.3.</strong> Using cargo-web</a></li></ol></li><li class="chapter-item expanded "><a href="../getting-started/starter-templates.html"><strong aria-hidden="true">3.</strong> Starter Templates</a></li><li class="chapter-item expanded "><a href="../getting-started/build-a-sample-app.html"><strong aria-hidden="true">4.</strong> Build a Sample App</a></li><li class="chapter-item expanded "><a href="../getting-started/choose-web-library.html"><strong aria-hidden="true">5.</strong> Choose web-sys or stdweb</a></li><li class="chapter-item expanded "><a href="../getting-started/examples.html"><strong aria-hidden="true">6.</strong> Learn through examples</a></li><li class="chapter-item expanded "><a href="../concepts/html/index.html"><strong aria-hidden="true">7.</strong> Using html!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/html/lists.html"><strong aria-hidden="true">7.1.</strong> Lists</a></li><li class="chapter-item expanded "><a href="../concepts/html/elements.html"><strong aria-hidden="true">7.2.</strong> Elements</a></li><li class="chapter-item expanded "><a href="../concepts/html/literals-and-expressions.html"><strong aria-hidden="true">7.3.</strong> Literals &amp; Expressions</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/components/index.html"><strong aria-hidden="true">8.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/components/internalstate.html"><strong aria-hidden="true">8.1.</strong> Internal State</a></li><li class="chapter-item expanded "><a href="../concepts/components/trapevents.html"><strong aria-hidden="true">8.2.</strong> Listen to events</a></li><li class="chapter-item expanded "><a href="../concepts/components/properties.html"><strong aria-hidden="true">8.3.</strong> Properties</a></li><li class="chapter-item expanded "><a href="../concepts/components/emitevents.html"><strong aria-hidden="true">8.4.</strong> Emit events</a></li><li class="chapter-item expanded "><a href="../concepts/components/nestedcomponents.html"><strong aria-hidden="true">8.5.</strong> Nested component</a></li><li class="chapter-item expanded "><a href="../concepts/components/refs.html"><strong aria-hidden="true">8.6.</strong> Refs</a></li><li class="chapter-item expanded "><a href="../concepts/components/styling.html"><strong aria-hidden="true">8.7.</strong> Styling</a></li><li class="chapter-item expanded "><a href="../concepts/components/lifecycle.html"><strong aria-hidden="true">8.8.</strong> Lifecycle</a></li><li class="chapter-item expanded "><a href="../concepts/components/callbacks.html"><strong aria-hidden="true">8.9.</strong> Callbacks</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/agents.html" class="active"><strong aria-hidden="true">9.</strong> Agents</a></li><li class="chapter-item expanded "><a href="../concepts/services/index.html"><strong aria-hidden="true">10.</strong> Services</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/services/format.html"><strong aria-hidden="true">10.1.</strong> Format</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/router.html"><strong aria-hidden="true">11.</strong> Router</a></li><li class="chapter-item expanded "><a href="../advanced-topics/optimizations.html"><strong aria-hidden="true">12.</strong> Optimizations &amp; Best Practices</a></li><li class="chapter-item expanded "><a href="../advanced-topics/how-it-works.html"><strong aria-hidden="true">13.</strong> Low-level library internals</a></li><li class="chapter-item expanded "><a href="../more/roadmap.html"><strong aria-hidden="true">14.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../more/testing.html"><strong aria-hidden="true">15.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../more/debugging.html"><strong aria-hidden="true">16.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../more/external-libs.html"><strong aria-hidden="true">17.</strong> External Libs</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2><a class="header" href="#description-yews-actor-system" id="description-yews-actor-system">description: Yew's Actor System</a></h2>
+<h1><a class="header" href="#agents" id="agents">Agents</a></h1>
+<p>Agents are similar to Angular's <a href="https://angular.io/guide/architecture-services">Services</a> (but without dependency injection), and provide a Yew with an <a href="https://en.wikipedia.org/wiki/Actor_model">Actor Model</a>. Agents can be used to route messages between components independently of where they sit in the component hierarchy, or they can be used to create a global state, and they can also be used to offload computationally expensive tasks from the main thread which renders the UI. There is also planned support for using agents to allow Yew applications to communicate accross tabs (in the future).</p>
+<p>In order for agents to run concurrently, Yew uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web-workers</a>.</p>
+<h2><a class="header" href="#lifecycle" id="lifecycle">Lifecycle</a></h2>
+<p><img src="https://user-images.githubusercontent.com/42674621/79125224-b6481d80-7d95-11ea-8e6a-ab9b52d1d8ac.png" alt="Agent lifecycle" /></p>
+<h2><a class="header" href="#types-of-agents" id="types-of-agents">Types of Agents</a></h2>
+<h4><a class="header" href="#reaches" id="reaches">Reaches</a></h4>
+<ul>
+<li>Job - Spawn a new agent on the UI thread for every new bridge. This is good for moving shared but independent behavior that communicates with the browser out of components. (TODO verify) When the task is done, the agent will disappear.</li>
+<li>Context - Bridges will spawn or connect to an agent on the UI thread. This can be used to coordinate with state between components or other agents. When no bridges are connected to this agent, the agent will disappear.</li>
+<li>Private - Same as Job, but runs on its own web worker. </li>
+<li>Public - Same as Context, but runs on its own web worker.</li>
+<li>Global (WIP)</li>
+</ul>
+<h2><a class="header" href="#communication-between-agents-and-components" id="communication-between-agents-and-components">Communication between Agents and Components</a></h2>
+<h3><a class="header" href="#bridges" id="bridges">Bridges</a></h3>
+<p>A bridge allows bi-directional communication between an agent and a component. Bridges also allow agents to communicate with one another.</p>
+<h3><a class="header" href="#dispatchers" id="dispatchers">Dispatchers</a></h3>
+<p>A dispatcher allows uni-directional communication between a component and an agent. A bridge allows a component to send messages to an agent.</p>
+<h2><a class="header" href="#overhead" id="overhead">Overhead</a></h2>
+<p>Agents communicate by serializing their messages using <a href="https://github.com/servo/bincode">bincode</a>. So there is a higher performance cost than just calling functions. Unless the cost of computation or the need to coordinate across arbitrary components will outweigh the cost of message passing, you should contain your logic to functions where possible.</p>
+<h2><a class="header" href="#further-reading" id="further-reading">Further reading</a></h2>
+<ul>
+<li>The <a href="https://github.com/yewstack/yew/tree/master/examples/pub_sub">pub_sub</a> example shows how components can use agents to communicate with each other.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../concepts/components/callbacks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../concepts/services/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../concepts/components/callbacks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../concepts/services/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
